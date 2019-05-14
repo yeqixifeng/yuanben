@@ -1,0 +1,17 @@
+<view class="wrap">
+    <view class="r-cont" bind:tap="toArtical" wx:for="{{list}}" wx:key="report" data-article='{{item.articleId}}'>
+        <view class="c-1"></view>
+        <view class="c-title">
+            <view class="t-1">
+                <view class="t-1-1" wx:if="{{item.isRead==1}}">
+                    <view class="t-q" ></view>
+                </view>
+                <view class="t-1-2">{{item.title}}</view>
+            </view>
+            <view class="t-2">{{item.createTime}}</view>
+        </view>
+        <view class="c-cont">
+            <text>{{item.content}}</text>
+        </view>
+    </view>
+</view>

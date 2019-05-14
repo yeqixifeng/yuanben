@@ -1,0 +1,128 @@
+{
+	"description": "项目配置文件",
+	"packOptions": {
+		"ignore": []
+	},
+	"setting": {
+		"urlCheck": false,
+		"es6": true,
+		"postcss": true,
+		"minified": true,
+		"newFeature": true,
+		"autoAudits": false
+	},
+	"compileType": "miniprogram",
+	"libVersion": "2.6.2",
+	"appid": "wx6902f3515506a355",
+	"projectname": "%E6%BA%90%E6%9C%AC%E7%94%9F%E6%B4%BB",
+	"debugOptions": {
+		"hidedInDevtools": []
+	},
+	"isGameTourist": false,
+	"condition": {
+		"search": {
+			"current": -1,
+			"list": []
+		},
+		"conversation": {
+			"current": -1,
+			"list": []
+		},
+		"plugin": {
+			"current": -1,
+			"list": []
+		},
+		"game": {
+			"currentL": -1,
+			"list": []
+		},
+		"miniprogram": {
+			"current": 11,
+			"list": [
+				{
+					"id": 1,
+					"name": "backet",
+					"pathName": "pages/basket/basket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "owner",
+					"pathName": "pages/owner/owner/owner",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "confirm",
+					"pathName": "pages/myorder/confirm/comfirm",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "qiandao",
+					"pathName": "pages/owner/qiandao/qiandao",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "sign",
+					"pathName": "pages/sign/sign",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "examine",
+					"pathName": "pages/siji/examine/examine",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "ticket",
+					"pathName": "pages/siji/ticket/ticket",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "detail",
+					"pathName": "pages/siji/detail/detail",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "write",
+					"pathName": "pages/siji/write/write",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "yichang",
+					"pathName": "pages/siji/yichang/yichang",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "yichang",
+					"pathName": "pages/siji/yichang/yichang",
+					"query": "",
+					"scene": null
+				},
+				{
+					"id": -1,
+					"name": "tc",
+					"pathName": "pages/tcdetails/tcdetails",
+					"scene": null
+				}
+			]
+		}
+	}
+}

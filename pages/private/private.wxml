@@ -1,0 +1,22 @@
+<!-- pages/private/private.wxml -->
+<view class="v-bg">
+    <image class="v-image" src='http://h5.hyweb.com.cn/yuanben/private/privatebg.png'></image>
+    <image class="v-image1" src='http://h5.hyweb.com.cn/yuanben/private/zb.png' bind:tap="toBroadcast"></image>
+    <image class="v-image2" src='http://h5.hyweb.com.cn/yuanben/private/cp.png' bind:tap="toNowfood"></image>
+    <image class="v-image3" src='http://h5.hyweb.com.cn/yuanben/private/ps.png' bind:tap="toMyorder3"></image>
+    <button open-type="contact" class="v-image4-1">
+        <image class="v-image4" src='http://h5.hyweb.com.cn/yuanben/private/yy.png'></image>
+    </button>
+    <image class="v-image5" src='http://h5.hyweb.com.cn/yuanben/private/ncy.png' bind:tap="toActive"></image>
+    <image class="v-image6" src='http://h5.hyweb.com.cn/yuanben/private/ms.png'></image>
+</view>
+<view class="wrap" wx:if="{{isshow}}">
+     <view class='dialog-mask'></view>
+    <view class='dialog-info'>
+        <view class='dialog-title'>微信授权</view>
+        <view class='dialog-content'>获得你的公开信息（昵称、头像等）</view>
+        <view class='dialog-footer'>
+          <button class='dialog-btn' open-type="getUserInfo" bind:tap='bindGetUserInfo'>前往授权</button>
+        </view>
+    </view>
+</view>

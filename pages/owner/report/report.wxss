@@ -1,0 +1,69 @@
+.wrap{
+    position: absolute;
+    width: 100%;
+    min-height: 100%;
+    background: #F6F6F6;
+    overflow: hidden;
+}
+.r-cont{
+    width:710rpx;
+    height:200rpx;
+    background:rgba(255,255,255,1);
+    border-radius:10rpx;
+    margin: 20rpx;
+}
+.c-1{
+    width: 750rpx;
+    height: 20rpx;
+}
+.c-title{
+    margin: 0 30rpx;
+    display: flex;
+    justify-content: space-between
+}
+.t-1{
+    display: flex
+}
+.t-1-1{
+    width:20rpx;
+    height:31rpx;
+    margin-right: 10rpx;
+}
+.t-q{
+    position: relative;
+    top: 11rpx;
+    width:20rpx;
+    height:20rpx;
+    background:rgba(254,94,84,1);
+    border-radius:50%;
+}
+.t-1-2{
+    font-size:32rpx;
+    font-weight:bold;
+    color:rgba(0,0,0,1);
+}
+.t-2{
+    font-size:32rpx;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+}
+.c-cont{
+    margin: 18rpx 32rpx 0 30rpx;
+    width: 648rpx;
+    height: 100rpx;
+    overflow:hidden;  /*超出一行文字自动隐藏 */
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+    text-overflow:ellipsis;
+}
+.c-cont text{
+    width: 648rpx;
+    height: 100rpx;
+    display: -webkit-box;
+    word-break: break-all;
+    -webkit-box-orient: vertical;
+    overflow:hidden;  /*超出一行文字自动隐藏 */
+    -webkit-line-clamp: 3;
+    text-overflow:ellipsis;
+}

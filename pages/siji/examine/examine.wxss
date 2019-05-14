@@ -1,0 +1,268 @@
+/* 配送头部导航 */
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 750rpx;
+    height: 100rpx;
+    background: white;
+}
+
+.h-wrap1 {
+    display: flex;
+    width: 750rpx;
+    height: 96rpx;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.h-wrap2 {
+    width: 750rpx;
+    height: 4rpx;
+    background: rgba(234, 234, 234, 1);
+    display: flex;
+    justify-content: space-around;
+    margin: 0 auto;
+}
+
+.green {
+    color: rgba(125, 166, 71, 1);
+}
+
+.black {
+    color: rgba(51, 51, 51, 1);
+}
+
+.gray {
+    color: rgba(153, 153, 153, 1);
+}
+
+.h-title1 {
+    width: 90rpx;
+    height: 96rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    line-height: 96rpx;
+}
+
+.h-title2 {
+    width: 120rpx;
+    height: 96rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    line-height: 96rpx;
+}
+
+.h-title3 {
+    width: 90rpx;
+    height: 96rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    line-height: 96rpx;
+}
+
+.h-line1 {
+    width: 150rpx;
+    height: 4rpx;
+    background: rgba(125, 166, 71, 1);
+    border-radius: 2rpx;
+}
+
+.h-line2 {
+    width: 150rpx;
+    height: 4rpx;
+    background: rgba(125, 166, 71, 1);
+    border-radius: 2rpx;
+}
+
+.h-line3 {
+    width: 150rpx;
+    height: 4rpx;
+    background: rgba(125, 166, 71, 1);
+    border-radius: 2rpx;
+}
+
+.h-line1-2 {
+    width: 150rpx;
+    height: 4rpx;
+    border-radius: 2rpx;
+}
+
+.h-line2-2 {
+    width: 150rpx;
+    height: 4rpx;
+    border-radius: 2rpx;
+}
+
+.h-line3-2 {
+    width: 150rpx;
+    height: 4rpx;
+    border-radius: 2rpx;
+}
+
+/* 配送内容 */
+
+.content {
+    padding-top: 100rpx;
+    padding-bottom: 98rpx;
+}
+.c-wrap{
+    position: absolute;
+    background: rgba(246, 246, 246, 1);
+    min-height: 100%;
+    z-index: -10;
+}
+.c-space {
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(246, 246, 246, 1);
+}
+
+.c-list {
+    width: 750rpx;
+    background: rgba(246, 246, 246, 1);
+}
+
+.l-space {
+    width: 750rpx;
+    height: 1rpx;
+}
+
+.l-title {
+    background: white;
+    width: 750rpx;
+    height: 80rpx;
+}
+
+.l-title-text {
+    margin-left: 30rpx;
+    height: 80rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(255, 122, 122, 1);
+}
+
+.l-wrap {
+    width: 690rpx;
+    height: 224rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10rpx;
+    margin: 0 30rpx 30rpx 30rpx;
+}
+
+.l-wrap-space {
+    width: 690rpx;
+    height: 39rpx;
+}
+.l-wrap-0{
+    width: 630rpx;
+    height: 37rpx;
+    margin: 0rpx auto;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1) 
+}
+.l-wrap-1 {
+    width: 630rpx;
+    height: 37rpx;
+    margin: 17rpx auto;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1)
+}
+
+.l-text-1 {
+    display: flex;
+}
+
+.l-text-1-2 {
+    margin-left: 30rpx;
+}
+
+.l-wrap-2 {
+    width: 630rpx;
+    height: 37rpx;
+    margin: 17rpx auto;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1)
+}
+
+/* 核销 */
+
+.hx-wrap {
+    margin: 0 auto;
+    width: 690rpx;
+    height: 120rpx;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.hx-1 {
+    height: 120rpx;
+    font-size: 30rpx;
+    font-weight: 400;
+    color: rgba(51, 51, 51, 1);
+    line-height: 120rpx;
+}
+
+.hx-2 {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.hx-line {
+    width: 750rpx;
+    height: 2rpx;
+    background: rgba(245, 245, 245, 1);
+}
+
+/* 页面切换 */
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 750rpx;
+    height: 98rpx;
+    background: rgba(250, 250, 250, 1);
+}
+
+.f-space {
+    width: 750rpx;
+    height: 10rpx;
+}
+
+.f-wrap {
+    margin: 0 auto;
+    width: 370rpx;
+    height: 88rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-cont {
+    width: 54rpx;
+}
+
+.f-img {
+    width: 54rpx;
+    height: 54rpx;
+}
+
+.f-img image {
+    width: 54rpx;
+    height: 54rpx;
+}
+
+.f-text {
+    font-size: 20rpx;
+    font-weight: 500;
+    text-align: center;
+}

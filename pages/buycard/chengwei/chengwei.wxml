@@ -1,0 +1,56 @@
+<view class="a-wrap"></view>
+<view class="c-bg" wx:for="{{list}}" wx:key="card">
+    <image src="/image/bg.png" />
+    <view class="c-0">{{item.name}}</view>
+    <view class="c-1">{{item.meat}}荤+{{item.vegetables}}素+配菜 {{item.deliveryNum}}次宅配</view>
+    <view class="c-2">￥{{item.packerPrice}}</view>
+    <view class="c-3" data-id='{{item.id}}' data-price='{{item.packerPrice}}' bind:tap="topay">
+        立即购买
+    </view>
+</view>
+<view class="wrap" hidden="{{reply}}" catchtouchmove="true">
+    <view class="topay">
+        <view class="t-a">
+            <view class="t-a-1">支付金额</view>
+            <view class="t-a-2">￥{{price}}</view>
+            <view class="t-a-3">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/delete.png" bind:tap="payexit" />
+            </view>
+        </view>
+        <view class="t-b">
+            <view class="t-b-1">请选择支付方式</view>
+        </view>
+        <view class="t-c">
+            <view class="t-c-1">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/wxpay.png" />
+            </view>
+            <view class="t-c-2">微信支付</view>
+            <view class="t-c-3" bind:tap="onetype">
+                <image src="{{paytype == 1?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+            </view>
+            <view class="t-c-4">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/yepay.png" />
+            </view>
+            <view class="t-c-5">余额支付</view>
+            <view class="t-c-6" bind:tap="twotype">
+                <image src="{{paytype == 0?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+            </view>
+        </view>
+        <view class="t-b"></view>
+        <view class="t-d" bind:tap="pay">立即支付</view>
+    </view>
+</view>
+<!-- 余额支付密码 -->
+<view class='passwrod' wx:if='{{passwidow}}' bindtap='closepass'>
+    <view class='pass'>
+        <view class='tit'>请输入支付密码</view>
+        <view class='input'>
+            <view class='wrod'>
+                <block wx:for='{{length}}' wx:key="index">
+                    <input password disabled value='{{password.length>=index+1?password[index]:""}}'></input>
+                </block>
+            </view>
+            <input type='number' maxlength='6' focus='{{focus}}' value='{{password}}' bindinput='changepass'></input>
+        </view>
+    </view>
+</view>

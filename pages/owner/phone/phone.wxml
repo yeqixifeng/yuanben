@@ -1,0 +1,18 @@
+<view class="s-input1">
+    <input style="" placeholder="请输入手机号" bindinput="phoneInput"/>
+</view>
+<view class="s-input2">
+    <input style="" placeholder="请输入验证码" bindinput="codeInput"/>
+</view>
+<view class="s-input3 {{is_show?'show':'hide'}}" bindtap="clickVerify">
+    获取验证码
+</view>
+<view class="s-input3-2 {{is_show?'hide':'show'}}">
+    {{seconds}}后重新获取
+</view>
+<view class="s-input4 {{is_show?'show':'hide'}}" >
+    下一步
+</view>
+<view class="s-input4-2 {{is_show?'hide':'show'}}" bind:tap="toBack">
+    下一步
+</view>

@@ -1,0 +1,20 @@
+<view class="wrap">
+<view class="cont" wx:for="{{addressList}}" wx:key="addressList">
+    <view class="c-0"></view>
+    <view class="c-1">{{item.name}}</view>
+    <view class="c-2">{{item.province}}{{item.city}}{{item.county}}{{item.street}}</view>
+    <view class="c-3">{{item.mobile}}</view>
+    <view class="c-4" bind:tap="deleteAddress" data-address='{{item.deliveryAddressId}}'>
+        <image src="http://h5.hyweb.com.cn/yuanben/component/delete.png" />
+    </view>
+    <view class="c-5"></view>
+    <view class="c-bot">
+        <view class="c-6">
+            <image data-moren='{{index}}' bind:tap="changeselect" src="{{item.defaultAddress==0?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}} " />
+        </view>
+        <view class="c-7">{{item.defaultAddress==0?'已设为默认地址':'设为默认地址'}}</view>
+        <view class="c-8" bind:tap="toEdit" data-addressId='{{item.deliveryAddressId}}'>编辑</view>
+    </view>
+</view>
+<view class="foot" bind:tap="toAdd">添加收货地址</view>
+</view>

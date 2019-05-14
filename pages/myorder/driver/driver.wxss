@@ -1,0 +1,261 @@
+.wrap{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background: rgba(246,246,246,1);
+}
+.d-head{
+    width: 750rpx;
+    height: 150rpx;
+    background: white
+}
+.h-wrap{
+    position: relative;
+    top: 20rpx;
+    width: 720rpx;
+    margin: 20rpx 0 20rpx 30rpx;
+    height: 110rpx;
+    display: flex;
+}
+.h-1{
+    width: 110rpx;
+    height: 110rpx;
+}
+.h-1 image{
+    width: 110rpx;
+    height: 110rpx;
+}
+.h-2{
+    width: 340rpx;
+    height: 110rpx;
+    margin-left: 30rpx;
+}
+.h-2-1{
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.h-2-2{
+    margin-top: 5rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.h-2-3{
+    margin-top: 5rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.h-3{
+    width: 1rpx;
+    height: 110rpx;
+    margin-left: 90rpx;
+    background:rgba(208,208,208,1);
+}
+.h-4{
+    width: 120rpx;
+    height: 110rpx;
+    margin-left: 23rpx;
+}
+.h-4-1{
+    margin: 12rpx 0 0 27rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+.h-4-1 image{
+    width: 48rpx;
+    height: 48rpx;
+}
+.h-4-2{
+    margin-top: 15rpx;
+    font-size:26rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(125,166,71,1);
+}
+.d-interval{
+    width:750rpx;
+    height:20rpx;
+}
+.d-state{
+    width: 750rpx;
+    height: 220rpx;
+    background: white;
+    position: relative;
+}
+.s-1{
+    position: absolute;
+    left: 96rpx;
+    top: 40rpx;
+    font-size:26rpx;
+    font-weight:500;
+}
+.s-2{
+    position: absolute;
+    left: 338rpx;
+    top: 40rpx;
+    font-size:26rpx;
+    font-weight:500;
+}
+.s-3{
+    position: absolute;
+    left: 577rpx;
+    top: 40rpx;
+    font-size:26rpx;
+    font-weight:500;
+}
+.s-4{
+    position: absolute;
+    left: 120rpx;
+    top: 95rpx;
+    width:30rpx;
+    height:30rpx;
+    border-radius:50%;
+}
+.s-5{
+    position: absolute;
+    left: 156rpx;
+    top: 108rpx;
+    width:200rpx;
+    height:4rpx;
+    background:rgba(208,208,208,1);
+}
+.s-6{
+    position: absolute;
+    left: 360rpx;
+    top: 95rpx;
+    width:30rpx;
+    height:30rpx;
+    border-radius:50%;
+}
+.s-7{
+    position: absolute;
+    left: 396rpx;
+    top: 108rpx;
+    width:200rpx;
+    height:4rpx;
+    background:rgba(208,208,208,1);
+}
+.s-8{
+    position: absolute;
+    left: 600rpx;
+    top: 95rpx;
+    width:30rpx;
+    height:30rpx;
+    border-radius:50%;
+}
+.s-9{
+    position: absolute;
+    left: 84rpx;
+    top: 155rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(0,0,0,1);
+}
+.s-10{
+    position: absolute;
+    left: 604rpx;
+    top: 155rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(0,0,0,1);
+}
+.color1{
+    color:rgba(153,153,153,1);
+}
+.color2{
+    color:rgba(125,166,71,1);
+}
+.back1{
+    background:rgba(208,208,208,1);
+}
+.back2{
+    background:rgba(125,166,71,1);
+}
+.d-record{
+    width: 750rpx;
+    background: white;
+}
+.r-title{
+    width: 750rpx;
+    height: 100rpx;
+}
+.r-title-1{
+    width: 720rpx;
+    height: 100rpx;
+    margin-left: 30rpx;
+    font-size:30rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    line-height:100rpx;
+}
+.r-line{
+    width:750rpx;
+    height:1rpx;
+    background: rgba(208,208,208,1);
+}
+.r-cont{
+    width: 750rpx;
+    display: flex;
+}
+.r-1{
+    width: 90rpx;
+    height: 120rpx;
+    margin: 0 20rpx 0 40rpx; 
+}
+.r-qiu1{
+    margin-top: 45rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.r-qiu1 image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.r-qiu2{
+    margin: 0 10rpx 0 10rpx;
+    width: 20rpx;
+    height: 20rpx;
+}
+.r-qiu2 image{
+    position: relative;
+    top: -20rpx;
+    width: 20rpx;
+    height: 20rpx;
+}
+.r-xian{
+    width:2rpx;
+    height:95rpx;
+    background: #CCCCCC;
+    margin: 0 19rpx;
+}
+.r-2{
+    width: 660rpx;
+}
+.r-3{
+    width: 660rpx;
+    height: 120rpx;
+}
+.r-4{
+    width:660rpx;
+    height:2rpx;
+    background: rgba(208,208,208,1);
+}
+.r-infor{
+    position: relative;
+    left: 10rpx;
+    top: 30rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(125,166,71,1);
+}
+.r-time{
+    position: relative;
+    left: 10rpx;
+    top: 30rpx;
+    margin-top: 18rpx;
+    font-size:20rpx;
+    font-weight:500;
+    color:rgba(153,153,154,1);
+}

@@ -1,0 +1,35 @@
+<view class="wrap">
+    <view class="d-head">
+        <view class="h-wrap">
+            <view class="h-1">
+                <image src="http://h5.hyweb.com.cn/yuanben/myorder/peisong.png" />
+            </view>
+            <view class="h-2">
+                <view class="h-2-1">配送方式：源本生活私家宅配</view>
+                <view class="h-2-2">配送司机：{{user.username}}</view>
+                <view class="h-2-3">司机电话：{{user.mobile}}</view>
+            </view>
+            <view class="h-3"></view>
+            <view class="h-4" bind:tap="tell">
+                <view class="h-4-1">
+                    <image src="http://h5.hyweb.com.cn/yuanben/myorder/phone.png" />
+                </view>
+                <view class="h-4-2">联系司机</view>
+            </view>
+        </view>
+    </view>
+    <view class="d-interval"></view>
+    <view class="d-state">
+        <view class="s-1 {{state==1?'color2':'color1'}}">打包中</view>
+        <view class="s-2 {{state==2?'color2':'color1'}}">配送中</view>
+        <view class="s-3 {{state==3?'color2':'color1'}}">已完成</view>
+        <view class="s-4 {{state==1?'back2':'back1'}}"></view>
+        <view class="s-5"></view>
+        <view class="s-6 {{state==2?'back2':'back1'}}"></view>
+        <view class="s-7"></view>
+        <view class="s-8 {{state==3?'back2':'back1'}}"></view>
+        <view class="s-9">私家农场</view>
+        <view class="s-10">家</view>
+    </view>
+    <view class="d-interval"></view>
+</view>

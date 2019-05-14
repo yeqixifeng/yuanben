@@ -1,0 +1,48 @@
+.list {
+    width: 750rpx;
+    height: 220rpx;
+}
+
+.l-wrap {
+    width: 750rpx;
+    height: 200rpx;
+    margin: 0 auto;
+}
+
+.l-cont {
+    width: 690rpx;
+    height: 100rpx;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+}
+
+.line {
+    width: 7500rpx;
+    height: 1rpx;
+    background: rgba(234, 234, 234, 1);
+}
+
+.l-line {
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(246, 246, 246, 1);
+}
+
+.l-text {
+    height: 100rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    line-height: 100rpx;
+}
+
+.l-text1 {
+    display: flex;
+    justify-content: space-between;
+    width: 350rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    height: 100rpx;
+}

@@ -1,0 +1,4 @@
+<view class="n-input">
+    <input type="text" value="昵称昵称" bindinput='formName'/>
+</view>
+<view class="button" bind:tap="toBack">保存修改</view>

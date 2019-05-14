@@ -1,0 +1,29 @@
+<!--余额-->
+<view class="head">
+    <view class="h-0"></view>
+    <view class="h-1">可用余额</view>
+    <view class="h-2">￥{{user.amount.rechargeBlance}}</view>
+    <view class="h-3" bind:tap="toRecharge">充值</view>
+</view>
+<view class="title">
+    <view class="t-1">
+        <image src="/image/owner/line.png" />
+    </view>
+    <view class="t-2">积分明细</view>
+</view>
+<view class="list" wx:for="{{list}}" wx:key="">
+    <view class="l-cont">
+        <view class="l-space"></view>
+        <view class="l-detail">
+            <view class="l-1">
+                <view class="l-1-1">{{item.detail}}</view>
+                <view class="l-1-2">{{item.activeBlance}}</view>
+            </view>
+            <view class="l-2">
+                <view class="l-2-1">{{item.detailTime}}</view>
+                <view class="l-2-2">可用余额:{{item.activeBlance}}</view>
+            </view>
+        </view>    
+    </view>
+    <view class="l-line"></view>
+</view>

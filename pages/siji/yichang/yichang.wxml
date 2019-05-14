@@ -1,0 +1,21 @@
+<view class="list">
+    <image data-type='1' bind:tap="changeType" src="{{type == 1?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+    <view class="y-text">箱子未回收</view>
+</view>
+<view class="line"></view>
+<view class="list">
+    <image data-type='2' bind:tap="changeType" src="{{type == 2?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+    <view class="y-text">菜品不好被拒</view>
+</view>
+<view class="line"></view>
+<view class="list">
+    <image data-type='3' bind:tap="changeType" src="{{type == 3?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+    <view class="y-text">客户家里没人</view>
+</view>
+<view class="line"></view>
+<view class="list">
+    <view class="y-text1">其他备注</view>
+    <input class="y-input" placeholder-class="input-placeholder" type="text" placeholder="请输入异常内容" bindinput="problem" />
+</view>
+<view class="line"></view>
+<view class="b-cont" bind:tap="finish">备注完成</view>

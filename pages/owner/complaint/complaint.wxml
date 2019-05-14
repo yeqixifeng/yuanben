@@ -1,0 +1,20 @@
+<view class="wrap">
+    <view class="c-input">
+        <textarea class="c-area" maxlength="-1" placeholder-style="color='#999999'" placeholder="请输入您对我们的意见或建议" />
+    </view>
+    <view class="c-line"></view>
+    <view class="c-sc">
+        <view class="sc-1">上传凭证</view>
+        <view class="sc-wrap">
+            <view class="sc-2">
+                <image src="http://h5.hyweb.com.cn/yuanben/owner/tousu.png" />
+            </view>
+            <view class="sc-2" bind:tap="updataImage">
+                <image src="http://h5.hyweb.com.cn/yuanben/owner/tousu.png" />
+                <view class="sc-2-1">上传凭证</view>
+                <view class="sc-2-2">（最多3张）</view>
+            </view>
+        </view>
+    </view>
+    <view class="c-button" bind:tap="saveProblem">保存</view>
+</view>

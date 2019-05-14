@@ -1,0 +1,6 @@
+<view class="b-wrap">
+    <view class="b-1"></view>
+    <view class="b-2"></view>
+    <view class="b-3"></view>
+    <view class="b-4"></view>
+</view>

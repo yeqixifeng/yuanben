@@ -1,0 +1,500 @@
+<view class="yk-wrap" wx:if="{{grade==1}}">
+    <view class="yk-tips">您还不是私家农场套餐宅配会员</view>
+    <view class="yk-banner">
+        <image src="http://h5.hyweb.com.cn/yuanben/food/youke.png" />
+    </view>
+    <view class="yk-category">
+        <view class="yk-kj" data-type='1' bindtap="changetype">
+            <view class="{{type==1?'yk-choose':'yk-unchoose'}}">荤菜</view>
+            <view class="yk-line" wx:if="{{type==1}}"></view>
+        </view>
+        <view class="yk-kj" data-type='2' bindtap="changetype">
+            <view class="{{type==2?'yk-choose':'yk-unchoose'}}">素菜</view>
+            <view class="yk-line" wx:if="{{type==2}}"></view>
+        </view>
+        <view class="yk-kj" data-type='3' bindtap="changetype">
+            <view class="{{type==3?'yk-choose':'yk-unchoose'}}">其他</view>
+            <view class="yk-line" wx:if="{{type==3}}"></view>
+        </view>
+        <view class="yk-kj" data-type='4' bindtap="changetype">
+            <view class="{{type==4?'yk-choose':'yk-unchoose'}}">营养表</view>
+            <view class="yk-line" wx:if="{{type==4}}"></view>
+        </view>
+    </view>
+    <view class="yk-cont">
+        <view class="yk-1">您还不是私家农场套餐宅配会员</view>
+        <view class="yk-2">立即体验</view>
+        <view class="yk-3">
+            <image src="http://h5.hyweb.com.cn/yuanben/food/gouwulan.png" />
+            <view class="yk-3-1">3</view>
+        </view>
+    </view>
+</view>
+<view class="hy-wrap" wx:if="{{grade==2}}">
+    <view class="hy-banner">
+        <image src="http://h5.hyweb.com.cn/yuanben/food/huiyuan.png" />
+    </view>
+    <view class="hy-category">
+        <view class="yk-kj" data-type='1' bindtap="changetype">
+            <view class="{{type==1?'yk-choose':'yk-unchoose'}}">荤菜</view>
+            <view class="yk-line" wx:if="{{type==1}}"></view>
+        </view>
+        <view class="yk-kj" data-type='2' bindtap="changetype">
+            <view class="{{type==2?'yk-choose':'yk-unchoose'}}">素菜</view>
+            <view class="yk-line" wx:if="{{type==2}}"></view>
+        </view>
+        <view class="yk-kj" data-type='3' bindtap="changetype">
+            <view class="{{type==3?'yk-choose':'yk-unchoose'}}">其他</view>
+            <view class="yk-line" wx:if="{{type==3}}"></view>
+        </view>
+        <view class="yk-kj" data-type='4' bindtap="changetype">
+            <view class="{{type==4?'yk-choose':'yk-unchoose'}}">营养表</view>
+            <view class="yk-line" wx:if="{{type==4}}"></view>
+        </view>
+    </view>
+    <view class="hy-cont" wx:if="{{type==1}}">
+        <view class="hy-item" wx:for="{{hun}}" wx:key="hun" bind:tap="toFooddetails" data-goodid='{{item.goodsId}}'>
+            <view class="hy-1">
+                <image src="{{item.showMasterMap[0].url}}" />
+            </view>
+            <view class="hy-2">{{item.title}}</view>
+            <view class="hy-3">{{item.sku[0].isSpecification}}</view>
+            <view class="hy-4">原价:￥{{item.sku[0].originalPrice}}</view>
+            <view class="hy-5">特惠价:￥{{item.sku[0].preferentialPrice}}</view>
+            <view class="hy-6">会员价:￥{{item.sku[0].memberPrice}}</view>
+            <view class="hy-7" wx:if="{{item.cartNum!=undefined}}">
+                <view class="jj-wrap">
+                    <view class="jj-jian" catch:tap="minus" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jian.png" class="jj-jian-i" />
+                    </view>
+                    <view class="jj-num">{{item.cartNum}}</view>
+                    <view class="jj-jia" catch:tap="add" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jia.png" class="jj-jia-i" />
+                    </view>
+                </view>
+            </view>
+            <view class="hy-8" wx:if="{{item.cartNum==undefined}}" catch:tap="create" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}">
+                <image src="/image/back.png" />
+            </view>
+        </view>
+    </view>
+    <view class="hy-cont" wx:if="{{type==2}}">
+        <view class="hy-item" wx:for="{{su}}" wx:key="su" bind:tap="toFooddetails" data-goodid='{{item.goodsId}}'>
+            <view class="hy-1">
+                <image src="{{item.showMasterMap[0].url}}" />
+            </view>
+            <view class="hy-2">{{item.title}}</view>
+            <view class="hy-3">{{item.sku[0].isSpecification}}</view>
+            <view class="hy-4">原价:￥{{item.sku[0].originalPrice}}</view>
+            <view class="hy-5">特惠价:￥{{item.sku[0].preferentialPrice}}</view>
+            <view class="hy-6">会员价:￥{{item.sku[0].memberPrice}}</view>
+            <view class="hy-7" wx:if="{{item.cartNum!=undefined}}">
+                <view class="jj-wrap">
+                    <view class="jj-jian" catch:tap="minus" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jian.png" class="jj-jian-i" />
+                    </view>
+                    <view class="jj-num">{{item.cartNum}}</view>
+                    <view class="jj-jia" catch:tap="add" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jia.png" class="jj-jia-i" />
+                    </view>
+                </view>
+            </view>
+            <view class="hy-8" wx:if="{{item.cartNum==undefined}}" catch:tap="create" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}">
+                <image src="/image/back.png" />
+            </view>
+        </view>
+    </view>
+    <view class="hy-cont" wx:if="{{type==3}}">
+        <view class="hy-item" wx:for="{{qita}}" wx:key="qita" bind:tap="toFooddetails" data-goodid='{{item.goodsId}}'>
+            <view class="hy-1">
+                <image src="{{item.showMasterMap[0].url}}" />
+            </view>
+            <view class="hy-2">{{item.title}}</view>
+            <view class="hy-3">{{item.sku[0].isSpecification}}</view>
+            <view class="hy-4">原价:￥{{item.sku[0].originalPrice}}</view>
+            <view class="hy-5">特惠价:￥{{item.sku[0].preferentialPrice}}</view>
+            <view class="hy-6">会员价:￥{{item.sku[0].memberPrice}}</view>
+            <view class="hy-7" wx:if="{{item.cartNum!=undefined}}">
+                <view class="jj-wrap">
+                    <view class="jj-jian" catch:tap="minus" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}" data-goodsNum="{{item.goodsNum}}">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jian.png" class="jj-jian-i" />
+                    </view>
+                    <view class="jj-num">{{item.cartNum}}</view>
+                    <view class="jj-jia" catch:tap="add" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jia.png" class="jj-jia-i" />
+                    </view>
+                </view>
+            </view>
+            <view class="hy-8" wx:if="{{item.cartNum==undefined}}" catch:tap="create" data-goodsId="{{item.goodsId}}" data-skuId="{{item.sku[0].goodsSkuId}}">
+                <image src="/image/back.png" />
+            </view>
+        </view>
+    </view>
+    <view class="yy-wrap-hy" wx:if="{{type==4}}">
+        <view class="yy-line"></view>
+        <view class="yy-cont">
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">能量</view>
+                    <view class="yy-2">{{yyb[0]}}</view>
+                    <view class="yy-3">kcal</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">蛋白质</view>
+                    <view class="yy-2">{{yyb[1]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">脂肪</view>
+                    <view class="yy-2">{{yyb[2]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">碳水化合物</view>
+                    <view class="yy-2">{{yyb[3]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">膳食纤维</view>
+                    <view class="yy-2">{{yyb[4]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">维生素C</view>
+                    <view class="yy-2">{{yyb[5]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">维生素E</view>
+                    <view class="yy-2">{{yyb[6]}}</view>
+                    <view class="yy-3">mg a-TE</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">维生素A</view>
+                    <view class="yy-2">{{yyb[7]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">维生素B1</view>
+                    <view class="yy-2">{{yyb[8]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">维生素B2</view>
+                    <view class="yy-2">{{yyb[9]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">维生素B3</view>
+                    <view class="yy-2">{{yyb[10]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">钙</view>
+                    <view class="yy-2">{{yyb[11]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">钾</view>
+                    <view class="yy-2">{{yyb[12]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">铁</view>
+                    <view class="yy-2">{{yyb[13]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">镁</view>
+                    <view class="yy-2">{{yyb[14]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">锌</view>
+                    <view class="yy-2">{{yyb[15]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">硒</view>
+                    <view class="yy-2">{{yyb[16]}}</view>
+                    <view class="yy-3">g</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-cont">
+                <view class="yy-list">
+                    <view class="yy-1">钠</view>
+                    <view class="yy-2">{{yyb[17]}}</view>
+                    <view class="yy-3">mg</view>
+                </view>
+                <view class="yy-line2"></view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+    </view>
+    <view class="hy-gouwulan" bindtap="toBasket">
+        <image src="http://h5.hyweb.com.cn/yuanben/food/gouwulan.png" />
+        <view class="yk-3-1">{{basketNum}}</view>
+    </view>
+</view>
+<view class="tc-wrap" wx:if="{{grade==3}}">
+    <view class="tc-tips">更换菜品请在{{omonth}}月{{oday}}日{{ohour}}:00前完成确认，无更换系统默认此菜单{{cmonth}}月{{cday}}日配送</view>
+    <view class="tc-line1"></view>
+    <view class="tc-title">
+        <view class="tc-t-1">
+            <image src="http://h5.hyweb.com.cn/yuanben/food/line.png" />
+        </view>
+        <view class="tc-t-2">第49次私家农场食材配送单</view>
+    </view>
+    <view class="tc-line2"></view>
+    <view class="tc-category">
+        <view class="yk-kj" data-type='1' bindtap="changetype">
+            <view class="{{type==1?'yk-choose':'yk-unchoose'}}">荤菜</view>
+            <view class="yk-line" wx:if="{{type==1}}"></view>
+        </view>
+        <view class="yk-kj" data-type='2' bindtap="changetype">
+            <view class="{{type==2?'yk-choose':'yk-unchoose'}}">素菜</view>
+            <view class="yk-line" wx:if="{{type==2}}"></view>
+        </view>
+        <view class="yk-kj" data-type='3' bindtap="changetype">
+            <view class="{{type==3?'yk-choose':'yk-unchoose'}}">其他</view>
+            <view class="yk-line" wx:if="{{type==3}}"></view>
+        </view>
+        <view class="yk-kj" data-type='4' bindtap="changetype">
+            <view class="{{type==4?'yk-choose':'yk-unchoose'}}">营养表</view>
+            <view class="yk-line" wx:if="{{type==4}}"></view>
+        </view>
+    </view>
+    <view class="tc-cont" wx:if="{{type==1}}">
+        <view class="tc-item" wx:for="{{hun}}" wx:key="hun" data-goodid='{{item.id}}' bind:tap="toTcdetails">
+            <view class="tc-1">
+                <image src="{{item.goodsImg}}" />
+            </view>
+            <view class="tc-2">{{item.title}}</view>
+            <view class="tc-3">{{item.specification}}</view>
+            <view class="tc-4" wx:if="{{isReplace==0}}" catch:tap="toChangefood" data-orderitemid='{{orderId}}' data-goodid='{{item.id}}'>
+                <view class="tc-4-1" >更换菜品</view>
+            </view>
+        </view>
+    </view>
+    <view class="tc-cont" wx:if="{{type==2}}">
+        <view class="tc-item" wx:for="{{su}}" wx:key="su" data-goodid='{{item.id}}' bind:tap="toTcdetails">
+            <view class="tc-1">
+                <image src="{{item.goodsImg}}" />
+            </view>
+            <view class="tc-2">{{item.title}}</view>
+            <view class="tc-3">{{item.specification}}</view>
+            <view class="tc-4" wx:if="{{isReplace==0}}" catch:tap="toChangefood" data-orderitemid='{{orderId}}' data-goodid='{{item.id}}'>
+                <view class="tc-4-1" >更换菜品</view>
+            </view>
+        </view>
+    </view>
+    <view class="tc-cont" wx:if="{{type==3}}">
+        <view class="tc-item" wx:for="{{qita}}" wx:key="qita" data-goodid='{{item.id}}' bind:tap="toTcdetails">
+            <view class="tc-1">
+                <image src="{{item.goodsImg}}" />
+            </view>
+            <view class="tc-2">{{item.title}}</view>
+            <view class="tc-3">{{item.specification}}</view>
+            <view class="tc-4" wx:if="{{isReplace==0}}" catch:tap="toChangefood" data-orderitemid='{{orderId}}' data-goodid='{{item.id}}'>
+                <view class="tc-4-1" >更换菜品</view>
+            </view>
+        </view>
+    </view>
+    <view class="yy-wrap" wx:if="{{type==4}}">
+        <view class="yy-line"></view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">能量</view>
+                <view class="yy-2">{{yyb[0]}}</view>
+                <view class="yy-3">kcal</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">蛋白质</view>
+                <view class="yy-2">{{yyb[1]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">脂肪</view>
+                <view class="yy-2">{{yyb[2]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">碳水化合物</view>
+                <view class="yy-2">{{yyb[3]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">膳食纤维</view>
+                <view class="yy-2">{{yyb[4]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">维生素C</view>
+                <view class="yy-2">{{yyb[5]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">维生素E</view>
+                <view class="yy-2">{{yyb[6]}}</view>
+                <view class="yy-3">mg a-TE</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">维生素A</view>
+                <view class="yy-2">{{yyb[7]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">维生素B1</view>
+                <view class="yy-2">{{yyb[8]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">维生素B2</view>
+                <view class="yy-2">{{yyb[9]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">维生素B3</view>
+                <view class="yy-2">{{yyb[10]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">钙</view>
+                <view class="yy-2">{{yyb[11]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">钾</view>
+                <view class="yy-2">{{yyb[12]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">铁</view>
+                <view class="yy-2">{{yyb[13]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">镁</view>
+                <view class="yy-2">{{yyb[14]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">锌</view>
+                <view class="yy-2">{{yyb[15]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">硒</view>
+                <view class="yy-2">{{yyb[16]}}</view>
+                <view class="yy-3">g</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+        <view class="yy-cont">
+            <view class="yy-list">
+                <view class="yy-1">钠</view>
+                <view class="yy-2">{{yyb[17]}}</view>
+                <view class="yy-3">mg</view>
+            </view>
+            <view class="yy-line2"></view>
+        </view>
+    </view>
+    <view class="tc-button" bind:tap="toComfirm">确认配送</view>
+</view>

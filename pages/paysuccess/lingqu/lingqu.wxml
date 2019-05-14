@@ -1,0 +1,5 @@
+<view class="lq-1">
+    <image src="http://h5.hyweb.com.cn/yuanben/paysuccess/lingqu.png" />
+</view>
+<view class="lq-2">领取成功</view>
+<view class="lq-3" bind:tap="toNcy">立即查看</view>

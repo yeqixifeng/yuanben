@@ -1,0 +1,80 @@
+<view class="wrap"></view>
+<view class="tx">
+    <view class="tx-1">
+        <image src="{{src}}" />
+    </view>
+    <view class="tx-2" bindtap="changetx">修改头像</view>
+    <view class="tx-3" bindtap="changetx">
+        <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+    </view>
+</view>
+<view class="cont">
+    <view class="c-1" bind:tap="toName">
+        <view class="c-2">昵称</view>
+        <view class="c-3">
+            <view class="c-3-t">{{nickName}}</view>
+            <view class="c-3-i">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+    </view>
+    <view class="c-line"></view>
+    <view class="c-1">
+        <view class="c-2">性别</view>
+        <view class="c-3" bindtap="changesex">
+            <view class="c-3-t" >{{sex}}</view>
+            <view class="c-3-i">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+    </view>
+    <view class="c-line"></view>
+    <view class="c-1" bind:tap="toPhone">
+        <view class="c-2">手机认证</view>
+        <view class="c-3">
+            <view class="c-3-t">{{mobile}}</view>
+            <view class="c-3-i">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+    </view>
+    <view class="c-line"></view>
+    <view class="c-1">
+        <view class="c-2">出生日期</view>
+        <picker
+            mode="date"
+            value="{{date}}"
+            start="1964-09-01"
+            end="2017-09-01"
+            bindchange="bindDateChange"
+        >
+        <view class="c-3">   
+            <view class="c-3-t">{{date}}</view>
+            <view class="c-3-i">       
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+        </picker>
+    </view>
+    <view class="c-line" wx:if="{{!ispassword}}"></view>
+    <view class="c-1" bind:tap="toPassword" wx:if="{{!ispassword}}">
+        <view class="c-2">设置交易密码</view>
+        <view class="c-3">
+            <view class="c-3-t"></view>
+            <view class="c-3-i">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+    </view>
+    <view class="c-line" wx:if="{{ispassword}}"></view>
+    <view class="c-1" bind:tap="toForget" wx:if="{{ispassword}}">
+        <view class="c-2">忘记交易密码</view>
+        <view class="c-3">
+            <view class="c-3-t"></view>
+            <view class="c-3-i">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="b-1" bind:tap="exitLogin">提交</view>

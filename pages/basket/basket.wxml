@@ -1,0 +1,55 @@
+<view class="wrap"></view>
+<view class="f-line"></view>
+<view class="b-head" wx:if="{{isDiscount==0}}">
+    <view class="h-1">
+        <image src="http://h5.hyweb.com.cn/yuanben/basket/unselete.png"  wx:if="{{isDiscount==1}}"/>
+        <image src="http://h5.hyweb.com.cn/yuanben/basket/selete.png"  wx:if="{{isDiscount==0}}"/>
+    </view>
+    <view class="h-2">另加菜</view>
+    <view class="h-3">两小时内付款可享超低会员价</view>
+    <view class="h-4" bind:tap="tonowfood">去加菜</view>
+    <view class="h-5" bind:tap="tonowfood">
+        <image src="http://h5.hyweb.com.cn/yuanben/component/gengduo.png" />
+    </view>
+</view>
+<view class="b-line"></view>
+<view class="b-cont">
+    <view class="c-wrap" wx:for="{{list}}" wx:key="basket">
+        <view class="c-1">
+            <image wx:if="{{item.selected}}" bindtap="selectList" data-index="{{index}}" src="http://h5.hyweb.com.cn/yuanben/basket/selete.png" />
+            <image wx:else data-index="{{index}}" bindtap="selectList" src="http://h5.hyweb.com.cn/yuanben/basket/unselete.png" />
+        </view>
+        <view class="c-2">
+            <image src="{{item.goods.showMasterMap[0].url}}" />
+        </view>
+        <view class="c-3">{{item.goods.title}}</view>
+        <view class="c-4">{{item.sku.isSpecification}}</view>
+        <view class="c-5" wx:if="{{isDiscount==0}}">￥{{item.sku.memberPrice}}</view>
+        <view class="c-5" wx:if="{{isDiscount==1}}">￥{{item.sku.preferentialPrice}}</view>
+        <view class="c-6">
+            <view class="jj-wrap">
+                <view class="jj-jian" bindtap="btn_minus" data-obj="{{obj}}" data-index="{{index}}">
+                    <image src="http://h5.hyweb.com.cn/yuanben/component/jian.png" class="jj-jian-i" />
+                </view>
+                <view class="jj-num">{{item.goodsSize}}</view>
+                <view class="jj-jia" bindtap="btn_add" data-index="{{index}}">
+                    <image src="http://h5.hyweb.com.cn/yuanben/component/jia.png" class="jj-jia-i" />
+                </view>
+            </view>
+        </view>
+        <view class="c-7" bindtap='deletes' data-index='{{index}}'>
+            <image src="http://h5.hyweb.com.cn/yuanben/basket/delete.png" />
+        </view>
+        <view class="b-line"></view>
+    </view>
+</view>
+<view class="b-foot">
+    <view class="f-1">
+        <image wx:if="{{selectAllStatus}}" bindtap="selectAll" src="http://h5.hyweb.com.cn/yuanben/basket/selete.png" />
+        <image wx:else bindtap="selectAll" src="http://h5.hyweb.com.cn/yuanben/basket/unselete.png" />
+    </view>
+    <view class="f-2">全选</view>
+    <view class="f-3">合计：</view>
+    <view class="f-4">￥{{totalPrice}}</view>
+    <view class="f-5" bind:tap="toOrder">去结算</view>
+</view>

@@ -1,0 +1,147 @@
+.wrap{
+    width: 100%;
+    min-height: 100%;
+    position: absolute;
+    background: rgba(246,246,246,1);
+}
+.d-head{
+    width: 750rpx;
+    height: 150rpx;
+    background: white
+}
+.h-wrap{
+    position: relative;
+    top: 20rpx;
+    width: 720rpx;
+    margin: 20rpx 0 20rpx 30rpx;
+    height: 110rpx;
+    display: flex;
+}
+.h-1{
+    width: 110rpx;
+    height: 110rpx;
+}
+.h-1 image{
+    width: 110rpx;
+    height: 110rpx;
+}
+.h-2{
+    width: 340rpx;
+    height: 110rpx;
+    margin-left: 30rpx;
+}
+.h-2-1{
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.h-2-2{
+    margin-top: 5rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.h-2-3{
+    margin-top: 5rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.d-interval{
+    width:750rpx;
+    height:20rpx;
+}
+.d-record{
+    width: 750rpx;
+    background: white;
+}
+.r-title{
+    width: 750rpx;
+    height: 100rpx;
+}
+.r-title-1{
+    width: 720rpx;
+    height: 100rpx;
+    margin-left: 30rpx;
+    font-size:30rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    line-height:100rpx;
+}
+.r-line{
+    width:750rpx;
+    height:1rpx;
+    background: rgba(208,208,208,1);
+}
+.r-cont{
+    width: 750rpx;
+    display: flex;
+}
+.r-1{
+    width: 90rpx;
+    height: 120rpx;
+    margin: 0 20rpx 0 40rpx; 
+}
+.r-qiu1{
+    margin-top: 45rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+.r-qiu1 image{
+    width: 40rpx;
+    height: 40rpx;
+}
+.r-qiu2{
+    margin: 0 10rpx 0 10rpx;
+    width: 20rpx;
+    height: 20rpx;
+}
+.r-qiu2 image{
+    position: relative;
+    top: -20rpx;
+    width: 20rpx;
+    height: 20rpx;
+}
+.r-xian{
+    position: relative;
+    bottom: 1rpx;
+    width:2rpx;
+    height:97rpx;
+    background: #CCCCCC;
+    margin: 0 19rpx;
+}
+.r-2{
+    width: 660rpx;
+}
+.r-3{
+    width: 660rpx;
+    height: 120rpx;
+}
+.r-4{
+    width:660rpx;
+    height:2rpx;
+    background: rgba(208,208,208,1);
+}
+.r-infor{
+    position: relative;
+    left: 10rpx;
+    top: 20rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(125,166,71,1);
+}
+.r-time{
+    position: relative;
+    left: 10rpx;
+    top: 20rpx;
+    margin-top: 18rpx;
+    font-size:20rpx;
+    font-weight:500;
+    color:rgba(153,153,154,1);
+}
+.color1{
+    color:rgba(153,153,153,1);
+}
+.color2{
+    color:rgba(125,166,71,1);
+}

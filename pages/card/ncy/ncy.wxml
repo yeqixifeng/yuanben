@@ -1,0 +1,18 @@
+<view class="wrap" wx:if="{{reply}}" bind:tap="isopen">
+  <view class="f-w">
+    <view class="f-1">请向工作人员出示此条码</view>
+    <view class="f-2"><canvas class='canvas' canvas-id='canvas'></canvas></view>
+  </view>
+</view>
+<view class="head">
+  <span class="line"></span>
+  <span class="text">卡券列表</span>
+  <span class="line"></span>
+</view>
+<view class="cont">
+    <view class="quan" wx:for="{{list}}" wx:key="vouchers" bindtap='tapHandler' data-code='{{item.cardUrl}}'>
+        <image src="http://h5.hyweb.com.cn/yuanben/card/ncy1.png" wx:if="{{item.isUse=='未使用'}}" />
+        <button class="button" bindtap="isopen"  wx:if="{{item.isUse=='未使用'}}" data-index='{{index}}' >立即使用</button>
+        <image src="http://h5.hyweb.com.cn/yuanben/card/ncy2.png" wx:if="{{item.isUse=='已使用'}}"/> 
+    </view>
+</view>

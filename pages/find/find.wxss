@@ -1,0 +1,200 @@
+/* pages/find/find.wxss */
+
+.f-head {
+    width: 750rpx;
+    height: 90rpx;
+    background: rgba(125, 166, 71, 1);
+    position: relative;
+    text-align: center;
+}
+
+.f-head-ad {
+    position: absolute;
+    top: 20rpx;
+    left: 30rpx;
+    width: 220rpx;
+    height: 50rpx;
+    border-radius: 25rpx;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.f-head-ad-t {
+    display: block;
+    position: absolute;
+    top: 10rpx;
+    left: 19rpx;
+    font-size: 24rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: white;
+    width: 186rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.f-head-ad-t-i {
+    display: block;
+    position: absolute;
+    top: 22rpx;
+    left: 73rpx;
+    width: 20rpx;
+    height: 10rpx;
+}
+
+.f-head-text {
+    font-size: 32rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: 90rpx;
+}
+
+.f-line {
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(246, 246, 246, 1);
+}
+
+.back {
+    width: 710rpx !important;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.swiper {
+    height: 340rpx;
+}
+
+.wx-swiper-dots.wx-swiper-dots-horizontal {
+    margin-bottom: 8rpx;
+}
+
+swiper image {
+    width: 690rpx;
+    height: 300rpx;
+}
+
+.f-yx {
+    height: 745rpx;
+    width: 750rpx;
+}
+
+.f-yx-h {
+    margin: 20rpx auto;
+    text-align: center;
+}
+
+.f-yx-h-i {
+    width: 230rpx;
+    height: 30rpx;
+}
+
+.f-yx-c {
+    margin: 0 auto;
+    width: 710rpx;
+    height: 660rpx;
+    position: relative;
+}
+
+.f-yx-c-1 {
+    position: absolute;
+    top: 203rpx;
+    left: 482rpx;
+    width: 168rpx;
+    height: 50rpx;
+    background: rgba(177, 203, 89, 1);
+    border-radius: 25rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 50rpx;
+}
+
+.f-yx-c-h image {
+    width: 710rpx;
+    height: 280rpx;
+}
+
+.f-yx-c-l {
+    width: 700rpx;
+    margin: 20rpx 5rpx 0 5rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.f-l-c {
+    width: 220rpx;
+    height: 220rpx;
+    border-radius: 21rpx;
+}
+
+.f-l-c image {
+    width: 220rpx;
+    height: 220rpx;
+}
+
+.f-l-t1 {
+    text-align: center;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    margin-top: 20rpx;
+    width: 220rpx;
+}
+
+.f-l-t1-t {
+    display: block;
+    width: 220rpx;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.f-l-t2 {
+    text-align: center;
+    font-size: 20rpx;
+    font-weight: 500;
+    color: rgba(153, 153, 153, 1);
+    margin-top: 11rpx;
+}
+
+.f-l-t3 {
+    text-align: center;
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(254, 90, 80, 1);
+    margin-top: 6rpx;
+}
+
+.f-footer {
+    width: 750rpx;
+    height: 80rpx;
+    background: rgba(246, 246, 246, 1);
+    position: relative;
+}
+
+.f-f-i {
+    position: absolute;
+    left: 250rpx;
+    top: 19rpx;
+}
+
+.f-f-i image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.f-f-t {
+    position: absolute;
+    color: rgba(125, 166, 71, 1);
+    left: 314rpx;
+    top: 24rpx;
+    font-size: 24rpx;
+    font-weight: 500;
+}

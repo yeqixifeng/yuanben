@@ -1,0 +1,41 @@
+<view class="cont">
+    <view class="d-user">
+        <view class="user-space"></view>
+        <view class="user-info">
+            <view class="info-1">
+                <view>{{item.deliveryAddressForm.name}}</view>
+                <view class="info-2">{{item.deliveryAddressForm.phone}}</view>
+            </view>
+        </view>
+        <view class="user-address">{{item.deliveryAddressForm.address}}</view>
+    </view>
+    <view class="line"></view>
+    <view class="d-order">
+        <view class="order-space"></view>
+        <view class="order-bz">配菜标准：{{item.packerType}}</view>
+        <view class="order-list">
+            <view class="list" wx:for="{{list}}" wx:key="list">
+                <view class="list-1">{{item.title}}</view>
+                <view class="list-1">{{item.specification}}</view>
+            </view>
+            <view class="list" wx:for="{{list1}}" wx:key="list1">
+                <view class="list-1">{{item.title}}</view>
+                <view class="list-1">{{item.goodsSku.isSpecification}}</view>
+            </view>
+        </view>
+        <view class="order-space"></view>
+    </view>
+    <view class="line"></view>
+    <view class="d-yys">
+        <view class="y-text1">营养师备注</view>
+    </view>
+    <view class="line"></view>
+    <view class="d-yys">
+        <view class="y-text2" wx:if="{{item.deliveryStatus=='异常订单'}}">异常备注：{{item.remake}}</view>
+    </view>
+    <view class="line"></view>
+</view>
+<view class="footer" wx:if="{{item.logisticsType=='配送中'}}">
+    <view class="f-1" bind:tap="toYichang">异常订单</view>
+    <view class="f-2" bind:tap="finish">配送完成</view>
+</view>

@@ -1,0 +1,9 @@
+<view class="list" wx:for="{{goods}}" wx:key="changefood">
+    <view class="l-1">
+        <image src="{{item.goodsImg}}" />
+    </view>
+    <view class="l-2">{{item.title}}</view>
+    <view class="l-3">{{item.specification}}</view>
+    <view class="l-4" bindtap="foodchange" data-goodsid='{{goodid}}' data-replaceid='{{item.id}}' data-orderid='{{orderItemId}}'>替换菜品</view>
+    <view class="l-5"></view>
+</view>

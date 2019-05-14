@@ -1,0 +1,10 @@
+<view class="s-1">
+    <image src="http://h5.hyweb.com.cn/yuanben/paysuccess/s.png" />
+</view>
+<view class="s-2">支付成功</view>
+<view class="s-3">订单编号：{{pay.payNum}}</view>
+<view class="s-4">下单时间：{{pay.paymentTime}}</view>
+<view class="s-5">
+    <view class="b-1" bind:tap="toMyorder">我的订单</view>
+    <view class="b-2" bind:tap="toFind">继续逛逛</view>
+</view>

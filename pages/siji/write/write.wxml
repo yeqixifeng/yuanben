@@ -1,0 +1,17 @@
+<view class="list">
+    <view class="l-wrap">
+        <view class="l-cont">
+            <view class="l-text">2019.4.20</view>
+            <view class="l-text">5476487574</view>
+        </view>
+        <view class="line"></view>
+        <view class="l-cont">
+            <view class="l-text1">
+                <view class="l-text">张女士</view>
+                <view class="l-text">13298164678</view>
+            </view>
+            <view class="l-text">宅配体验券</view>
+        </view>
+    </view>
+    <view class="l-line"></view>
+</view>

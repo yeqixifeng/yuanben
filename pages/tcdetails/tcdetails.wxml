@@ -1,0 +1,29 @@
+<!-- pages/fooddetails/fooddetails.wxml -->
+<import src="/wxParse/wxParse.wxml" />
+<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots='true' indicator-color='rgba(255, 255, 255, 1)' indicator-active-color='rgba(125,166,71,1)' circular='true'>
+    <block wx:for="{{imgUrls}}" wx:key="banner2">
+        <swiper-item class="back center" width="750rpx" height="450rpx">
+            <image src="{{item}}" class="slide-image" width="750rpx" height="450rpx" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class='f-xq'>
+    <view class="xq-1">
+        <text>{{goods.title}}</text>
+    </view>
+</view>
+<view class="f-line"></view>
+<view class='f-gg'>
+    <view class="gg-1">规格：</view>
+    <view class="gg-2">
+        <view class="active">
+            {{goods.specification}}
+        </view>
+    </view>
+</view>
+<view class="f-line"></view>
+<view class='f-ax'>安心：  已检查64项农残围产表，符合检测标准。</view>
+<view class="f-line"></view>
+<view class="f-introduce">
+    <template is="wxParse" data="{{wxParseData:detiel.nodes}}" />
+</view>

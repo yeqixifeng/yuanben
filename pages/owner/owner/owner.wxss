@@ -1,0 +1,496 @@
+.o-head {
+    width: 750rpx;
+    height: 430rpx;
+    position: relative;
+}
+
+.o-line {
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(246, 246, 246, 1);
+}
+
+.h-bg {
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 750rpx;
+    height: 430rpx;
+}
+
+.h-bg image {
+    width: 750rpx;
+    height: 430rpx;
+}
+
+.h-tx {
+    position: absolute;
+    left: 50rpx;
+    top: 60rpx;
+    width: 100rpx;
+    height: 100rpx;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.h-tx image {
+    width: 100rpx;
+    height: 100rpx;
+}
+
+.h-0 {
+    position: absolute;
+    left: 180rpx;
+    top: 82rpx;
+    font-size: 40rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.h-1 {
+    position: absolute;
+    left: 180rpx;
+    top: 65rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.h-2 {
+    position: absolute;
+    left: 580rpx;
+    top: 85rpx;
+    width: 170rpx;
+    height: 50rpx;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 25rpx 0rpx 0rpx 25rpx;
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: 50rpx;
+    text-align: center
+}
+
+.h-3 {
+    position: absolute;
+    left: 182rpx;
+    top: 120rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.h-4 {
+    position: absolute;
+    left: 727rpx;
+    top: 77rpx;
+    width: 15rpx;
+    height: 15rpx;
+}
+
+.h-4 image {
+    width: 15rpx;
+    height: 15rpx;
+}
+
+.h-5 {
+    position: absolute;
+    left: 184rpx;
+    top: 221rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.h-6 {
+    position: absolute;
+    left: 155rpx;
+    top: 266rpx;
+    width: 113rpx;
+    height: 23rpx;
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+.h-7 {
+    position: absolute;
+    left: 375rpx;
+    top: 224rpx;
+    width: 1rpx;
+    height: 62rpx;
+    background: rgba(255, 255, 255, 1);
+}
+
+.h-8 {
+    position: absolute;
+    left: 515rpx;
+    top: 222rpx;
+    height: 24rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+}
+
+.h-9 {
+    position: absolute;
+    left: 486rpx;
+    top: 267rpx;
+    width: 113rpx;
+    height: 23rpx;
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+.h-10 {
+    position: absolute;
+    left: 45rpx;
+    top: 210rpx;
+    width: 300rpx;
+    height: 100rpx;
+}
+
+.h-11 {
+    position: absolute;
+    left: 380rpx;
+    top: 210rpx;
+    width: 300rpx;
+    height: 100rpx;
+}
+
+.h-gk-yk {
+    position: absolute;
+    left: 45rpx;
+    top: 321rpx;
+    width: 660rpx;
+    height: 110rpx;
+}
+
+.h-gk-yk image {
+    width: 660rpx;
+    height: 110rpx;
+}
+
+.yk-button {
+    position: absolute;
+    left: 479rpx;
+    top: 35rpx;
+    width: 160rpx;
+    height: 40rpx;
+    background: rgba(132, 97, 38, 1);
+    border-radius: 20rpx;
+    font-size: 20rpx;
+    font-weight: 500;
+    color: rgba(255, 238, 198, 1);
+    line-height: 40rpx;
+    text-align: center;
+}
+
+.h-gk-cz {
+    position: absolute;
+    left: 45rpx;
+    top: 321rpx;
+    width: 660rpx;
+    height: 110rpx;
+}
+
+.h-gk-cz image {
+    width: 660rpx;
+    height: 110rpx;
+}
+
+.cz-button {
+    position: absolute;
+    left: 479rpx;
+    top: 35rpx;
+    width: 160rpx;
+    height: 40rpx;
+    background: rgba(132, 97, 38, 1);
+    border-radius: 20rpx;
+    font-size: 20rpx;
+    font-weight: 500;
+    color: rgba(255, 238, 198, 1);
+    line-height: 40rpx;
+    text-align: center;
+}
+
+.h-gk-tc {
+    position: absolute;
+    left: 45rpx;
+    top: 321rpx;
+    width: 660rpx;
+    height: 110rpx;
+}
+
+.h-gk-tc image {
+    width: 660rpx;
+    height: 110rpx;
+}
+
+.tc-type {
+    position: absolute;
+    left: 300rpx;
+    top: 41rpx;
+    font-size: 23rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(132, 97, 38, 1);
+}
+
+.tc-button {
+    position: absolute;
+    left: 479rpx;
+    top: 38rpx;
+    width: 160rpx;
+    height: 40rpx;
+    background: rgba(132, 97, 38, 1);
+    border-radius: 20rpx;
+    font-size: 20rpx;
+    font-weight: 500;
+    color: rgba(255, 238, 198, 1);
+    line-height: 40rpx;
+    text-align: center;
+}
+
+.o-food {
+    width: 750rpx;
+    height: 230rpx;
+    position: relative;
+}
+
+.f-bt {
+    position: absolute;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 30rpx;
+    font-weight: 800;
+    color: rgba(51, 51, 51, 1);
+    left: 29rpx;
+    top: 30rpx
+}
+
+.f-dz {
+    position: absolute;
+    height: 30rpx;
+    line-height: 30rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    left: 569rpx;
+    top: 30rpx;
+}
+
+.f-gd {
+    position: absolute;
+    width: 20rpx;
+    height: 20rpx;
+    left: 708rpx;
+    top: 22.5rpx;
+}
+
+.f-gd image {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.f-cont image {
+    width: 60rpx;
+    height: 60rpx;
+}
+
+.c-1 {
+    position: absolute;
+    width: 60rpx;
+    height: 60rpx;
+    left: 110rpx;
+    top: 100rpx;
+}
+
+.c-2 {
+    position: absolute;
+    width: 60rpx;
+    height: 60rpx;
+    left: 345rpx;
+    top: 100rpx;
+}
+
+.c-3 {
+    position: absolute;
+    width: 60rpx;
+    height: 60rpx;
+    left: 580rpx;
+    top: 100rpx;
+}
+
+.c-4 {
+    position: absolute;
+    left: 99rpx;
+    top: 173rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.c-5 {
+    position: absolute;
+    left: 335rpx;
+    top: 173rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.c-6 {
+    position: absolute;
+    left: 570rpx;
+    top: 173rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.o-equity {
+    width: 750rpx;
+    height: 434rpx;
+}
+
+.o-equity image {
+    width: 90rpx;
+    height: 90rpx;
+}
+
+.e-title {
+    line-height: 30rpx;
+    font-size: 30rpx;
+    font-weight: 800;
+    color: rgba(51, 51, 51, 1);
+    margin: 30rpx 0 0 29rpx;
+}
+
+.e-1 {
+    margin: 42rpx 95rpx 0 95rpx;
+    width: 564rpx;
+    height: 135rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.e-2 {
+    margin: 35rpx 95rpx 0 95rpx;
+    width: 564rpx;
+    height: 135rpx;
+    display: flex;
+    justify-content: space-between;
+}
+
+.cont {
+    width: 96rpx;
+    height: 135rpx;
+    position: relative;
+}
+
+.cont-1 {
+    position: absolute;
+    width: 90rpx;
+    height: 90rpx;
+    left: 3rpx;
+    top: 0;
+}
+
+.cont-2 {
+    position: absolute;
+    width: 96rpx;
+    top: 112rpx;
+    left: 0;
+    text-align: center;
+    font-size: 24rpx;
+    font-weight: 500;
+    color: rgba(132, 97, 38, 1);
+}
+
+.cont-3 {
+    position: absolute;
+    left: 66rpx;
+    top: 1rpx;
+    background: #fe554a;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 26rpx;
+    font-size: 16rpx;
+    width: 26rpx;
+    height: 26rpx;
+    color: white;
+}
+
+.o-admin {
+    width: 750rpx;
+    height: 440rpx;
+    background: rgba(246, 246, 246, 1);
+}
+
+.space {
+    width: 750rpx;
+    height: 20rpx;
+    background: rgba(246, 246, 246, 1);
+}
+
+.a-cont {
+    margin: 0 auto;
+    width: 710rpx;
+    height: 400rpx;
+    background: rgba(255, 255, 255, 1);
+    border-radius: 10rpx;
+}
+
+.a-line {
+    margin: 0 auto;
+    width: 650rpx;
+    height: 2rpx;
+    background: rgba(208, 208, 208, 1);
+}
+
+.a-h {
+    margin: 0 auto;
+    width: 650rpx;
+    height: 99rpx;
+    position: relative;
+}
+
+.a-1 {
+    position: absolute;
+    left: 18rpx;
+    top: 33rpx;
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.a-1 image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.a-2 {
+    position: absolute;
+    left: 75rpx;
+    top: 35rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.a-3 {
+    position: absolute;
+    left: 627rpx;
+    top: 33rpx;
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.a-3 image {
+    width: 20rpx;
+    height: 20rpx;
+}

@@ -1,0 +1,121 @@
+<!-- pages/siji/examine/examine.wxml -->
+<view class="header" wx:if="{{page==1}}">
+    <view class="h-wrap1">
+        <view class="h-title1 {{type==1?'green':'black'}}" data-type='1' bindtap="changetype">
+            待配送
+        </view>
+        <view class="h-title2 {{type==2?'green':'black'}}" data-type='2' bindtap="changetype">
+            异常订单
+        </view>
+        <view class="h-title3 {{type==3?'green':'black'}}" data-type='3' bindtap="changetype">
+            已完成
+        </view>
+    </view>
+    <view class="h-wrap2">
+        <view class="{{type==1?'h-line1':'h-line1-2'}}"></view>
+        <view class="{{type==2?'h-line2':'h-line2-2'}}"></view>
+        <view class="{{type==3?'h-line3':'h-line3-2'}}"></view>
+    </view>
+</view>
+<view class="content" wx:if="{{page==1}}">
+    <view class="c-wrap" wx:if="{{type==1}}">
+        <view class="c-space"></view>
+        <view class="c-list">
+            <view class="c-space"></view>
+            <view class="l-wrap" wx:for="{{wait}}" wx:key="wait" data-orderid="{{item.orderId}}" data-deliveryid='{{item.deliveryId}}' bind:tap='toDetail'>
+                <view class="l-wrap-space"></view>
+                <view class="l-wrap-0" wx:if="{{item.lifeOrderEntity.consignTime}}">
+                    {{item.lifeOrderEntity.consignTime}}配送订单
+                </view>
+                <view class="l-wrap-1">
+                    <view class="l-text-1">
+                        <view class="l-text-1-1">{{item.deliveryAddressForm.name}}</view>
+                        <view class="l-text-1-2">{{item.deliveryAddressForm.phone}}</view>
+                    </view>
+                    <view class="l-text-2" wx:if="{{item.sysUserEntity.username}}">
+                        营养师{{item.sysUserEntity.username}}
+                    </view>
+                </view>
+                <view class="l-wrap-2">{{item.deliveryAddressForm.address}}</view>
+            </view>
+            <view class="l-space"></view>
+        </view>
+    </view>
+    <view class="c-wrap" wx:if="{{type==2}}">
+        <view class="c-space"></view>
+        <view class="c-list">
+            <view class="c-space"></view>
+            <view class="l-wrap" wx:for="{{yichang}}" wx:key="yichang" data-orderid="{{item.orderId}}" data-deliveryid='{{item.deliveryId}}' bind:tap='toDetail'>
+                <view class="l-wrap-space"></view>
+                <view class="l-wrap-0" wx:if="{{item.lifeOrderEntity.consignTime}}">
+                    {{item.lifeOrderEntity.consignTime}}配送订单
+                </view>
+                <view class="l-wrap-1">
+                    <view class="l-text-1">
+                        <view class="l-text-1-1">{{item.deliveryAddressForm.name}}</view>
+                        <view class="l-text-1-2">{{item.deliveryAddressForm.phone}}</view>
+                    </view>
+                    <view class="l-text-2" wx:if="{{item.sysUserEntity.username}}">
+                        营养师{{item.sysUserEntity.username}}
+                    </view>
+                </view>
+                <view class="l-wrap-2">{{item.deliveryAddressForm.address}}</view>
+            </view>
+            <view class="l-space"></view>
+        </view>
+    </view>
+    <view class="c-wrap" wx:if="{{type==3}}">
+        <view class="c-space"></view>
+        <view class="c-list">
+            <view class="c-space"></view>
+            <view class="l-wrap" wx:for="{{finish}}" wx:key="finish" data-orderid="{{item.orderId}}" data-deliveryid='{{item.deliveryId}}' bind:tap='toDetail'>
+                <view class="l-wrap-space"></view>
+                <view class="l-wrap-0" wx:if="{{item.lifeOrderEntity.consignTime}}">
+                    {{item.lifeOrderEntity.consignTime}}配送订单
+                </view>
+                <view class="l-wrap-1">
+                    <view class="l-text-1">
+                        <view class="l-text-1-1">{{item.deliveryAddressForm.name}}</view>
+                        <view class="l-text-1-2">{{item.deliveryAddressForm.phone}}</view>
+                    </view>
+                    <view class="l-text-2" wx:if="{{item.sysUserEntity.username}}">
+                        营养师{{item.sysUserEntity.username}}
+                    </view>
+                </view>
+                <view class="l-wrap-2">{{item.deliveryAddressForm.address}}</view>
+            </view>
+            <view class="l-space"></view>
+        </view>
+    </view>
+</view>
+<view class="hx" wx:if="{{page==2}}">
+    <view class="hx-wrap" bind:tap="scanCode">
+        <view class="hx-1">扫码核销</view>
+        <image class="hx-2" src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png"></image>
+    </view>
+    <view class="hx-line"></view>
+    <view class="hx-wrap" bind:tap="toWrite">
+        <view class="hx-1">核销记录</view>
+        <image class="hx-2" src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png"></image>
+    </view>
+    <view class="hx-line"></view>
+</view>
+<view class="footer">
+    <view class="f-space"></view>
+    <view class="f-wrap">
+        <view class="f-cont" data-page='1' bindtap="changepage">
+            <view class="f-img">
+                <image src="/image/{{page==1?'ps1':'ps2'}}.png" />
+            </view>
+            <view class="f-text {{page==1?'green':'gray'}}">配送</view>
+        </view>
+        <view class="f-cont" data-page='2' bindtap="changepage">
+            <view class="f-cont">
+                <view class="f-img">
+                    <image src="/image/{{page==2?'hx1':'hx2'}}.png" />
+                </view>
+                <view class="f-text {{page==2?'green':'gray'}}">审核</view>
+            </view>
+        </view>
+    </view>
+</view>

@@ -1,0 +1,28 @@
+.n-input{
+    width:660rpx;
+    height:80rpx;
+    border:1px solid rgba(208,208,208,1);
+    border-radius:10rpx;
+    margin: 49rpx 45rpx 50rpx 49rpx;
+    line-height: 80rpx
+}
+.n-input input{
+    font-size:26rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    margin: 0rpx 42rpx;
+    height:80rpx;
+}
+.button{
+    width:660rpx;
+    height:80rpx;
+    background:rgba(125,166,71,1);
+    border-radius:10rpx;
+    font-size:32rpx;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    margin: 50rpx 45rpx 0 45rpx;
+    text-align: center;
+    line-height: 80rpx;
+}

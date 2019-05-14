@@ -1,0 +1,107 @@
+<view class="o-head" bind:tap="toEdit" data-addressid='{{address.deliveryAddressId}}'>
+    <view class="h-1">
+        <image src="http://h5.hyweb.com.cn/yuanben/order/dingwei.png" />
+    </view>
+    <view class="h-2">收货人：{{address.name}}</view>
+    <view class="h-3">{{address.mobile}}</view>
+    <view class="h-4" >收货地址：{{address.province}}{{address.city}}{{address.county}}{{address.street}}</view>
+    <view class="h-5">
+        <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png"/>
+    </view>
+</view>
+<view class="o-line"></view>
+<view class="o-cont">
+    <view class="c-title">商城单品</view>
+    <view class="c-wrap" wx:for="{{list}}" wx:key="order">
+        <view class="c-line"></view>
+        <view class="c-1">
+             <image src="{{item.goods.showMasterMap[0].url}}" />
+        </view>
+        <view class="c-2">{{item.goods.title}}</view>
+        <view class="c-3">{{item.sku.isSpecification}}</view>
+        <view class="c-4">￥{{iscount==0?item.sku.memberPrice:item.sku.preferentialPrice}}</view>
+        <view class="c-5">x{{item.goodsSize}}</view>
+    </view>
+</view>
+<view class="o-line"></view>
+<view class="o-choose">
+    <view class="o-discount">
+        <view class="d-1">配送方式</view>
+        <view class="d-2">免费</view>
+        <view class="d-3">
+            <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+        </view>
+    </view>
+    <view class="c-line"></view>
+    <view class="o-message">
+        <view class="m-t">买家留言： </view>
+        <view class="m-input"><input placeholder="填写内容已和营养师协商确认" /></view>
+    </view>
+</view>
+<view class="o-line"></view>
+<view class="o-statistics">
+    <view class="o-money">
+        <view class="m-1">商品金额</view>
+        <view class="m-2">￥{{payment}}</view>
+    </view>
+    <view class="o-money">
+        <view class="m-1">运费</view>
+        <view class="m-2">￥0</view>
+    </view>
+</view>
+
+<view class="o-footer">
+    <view class="c-line"></view>
+    <view class="f-1">合计：</view>
+    <view class="f-2">￥{{payment}}</view>
+    <view class="f-3" bind:tap="payexit">提交订单</view>
+</view>
+
+
+<view class="wrap" wx:if="{{reply}}" catchtouchmove="true"><!-- 付钱 -->
+    <view class="topay">
+        <view class="t-a">
+            <view class="t-a-1">支付金额</view>
+            <view class="t-a-2">￥{{payment}}</view>
+            <view class="t-a-3">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/delete.png"  bind:tap="payexit"/>
+            </view>
+        </view>
+        <view class="t-b">
+            <view class="t-b-1">请选择支付方式</view>
+        </view>
+        <view class="t-c">
+            <view class="t-c-1">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/wxpay.png" />
+            </view>
+            <view class="t-c-2">微信支付</view>
+            <view class="t-c-3" bind:tap="onetype">
+                <image src="{{paytype == 0?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+            </view>
+            <view class="t-c-4">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/yepay.png" />
+            </view>
+            <view class="t-c-5">余额支付</view>
+            <view class="t-c-6" bind:tap="twotype">
+                <image src="{{paytype == 1?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+            </view>
+        </view>
+        <view class="t-b"></view>
+        <view class="t-d" bind:tap="toSuccess1">立即支付</view>
+    </view>
+</view>
+
+<!-- 余额支付密码 -->
+<view class='passwrod' wx:if='{{passwidow}}' bindtap='closepass'>
+  <view class='pass'>
+    <view class='tit'>请输入支付密码</view>
+    <view class='input'>
+      <view class='wrod'>
+        <block wx:for='{{length}}' wx:key="index">
+          <input password disabled value='{{password.length>=index+1?password[index]:""}}'></input>
+        </block>
+      </view>
+      <input type='number' maxlength='6' focus='{{focus}}' value='{{password}}' bindinput='changepass'></input>
+    </view>
+  </view>
+</view>

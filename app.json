@@ -1,0 +1,88 @@
+{
+  "pages": [
+    "pages/private/private",
+    "pages/find/find",
+    "pages/owner/owner/owner",
+    "pages/fooddetails/fooddetails",
+    "pages/broadcast/broadcast",
+    "pages/basket/basket",
+    "pages/paysuccess/paysuccess1/paysuccess1",
+    "pages/order/order",
+    "pages/card/ms/ms",
+    "pages/card/ncy/ncy",
+    "pages/card/sc/sc",
+    "pages/card/sr/sr",
+    "pages/sign/sign",
+    "pages/paysuccess/paysuccess2/paysuccess2",
+    "pages/recharge/recharge",
+    "pages/address/manage/managa",
+    "pages/address/edit/edit",
+    "pages/address/add/add",
+    "pages/owner/changename/changename",
+    "pages/owner/phone/phone",
+    "pages/owner/setting/setting",
+    "pages/buycard/chengwei/chengwei",
+    "pages/buycard/huiyuan/huiyuan",
+    "pages/food/changefood/changefood",
+    "pages/food/nowfood/nowfood",
+    "pages/details/active/active",
+    "pages/details/chongzhi/chongzhi",
+    "pages/details/experience/experience",
+    "pages/paysuccess/lingqu/lingqu",
+    "pages/myorder/deliver/deliver",
+    "pages/myorder/logistics/logistics",
+    "pages/myorder/myorder/myorder",
+    "pages/myorder/driver/driver",
+    "pages/card/zp/zp",
+    "pages/myorder/confirm/comfirm",
+    "pages/owner/complaint/complaint",
+    "pages/owner/report/report",
+    "pages/owner/artical/artical",
+    "pages/owner/qiandao/qiandao",
+    "pages/owner/balance/balance",
+    "pages/owner/password/password",
+    "pages/owner/forget/forget",
+    "pages/siji/examine/examine",
+    "pages/siji/detail/detail",
+    "pages/siji/ticket/ticket",
+    "pages/siji/write/write",
+    "pages/siji/yichang/yichang",
+    "pages/siji/lianjie/lianjie",
+    "pages/tcdetails/tcdetails"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarTitleText": "源本生活",
+    "navigationBarTextStyle": "black",
+    "navigationBarBackgroundColor": "#F6F6F6"
+  },
+  "tabBar": {
+    "color": "#999999",
+    "selectedColor": "#7DA647",
+    "list": [
+      {
+        "pagePath": "pages/find/find",
+        "text": "发现",
+        "selectedIconPath": "image/icon/new-farm.png",
+        "iconPath": "image/icon/new.png"
+      },
+      {
+        "pagePath": "pages/private/private",
+        "text": "私家农场",
+        "selectedIconPath": "image/icon/farm-hover.png",
+        "iconPath": "image/icon/farm.png"
+      },
+      {
+        "pagePath": "pages/owner/owner/owner",
+        "text": "我的",
+        "selectedIconPath": "image/icon/mine-hover.png",
+        "iconPath": "image/icon/mine.png"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": "你的位置信息将用于小程序位置接口的效果展示"
+    }
+  }
+}

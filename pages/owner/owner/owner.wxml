@@ -1,0 +1,144 @@
+<view class="o-head">
+    <view class="h-bg">
+        <image class="o-bg" src="http://h5.hyweb.com.cn/yuanben/owner/ownbg.png" />
+    </view>
+    <view class="h-tx" bind:tap="toSetting">
+        <image src="{{user.avatar}}" />
+    </view>
+    <view class="h-1" bind:tap="toSetting" >{{user.nickName}}</view>
+    <view class="h-2" bind:tap="toQiandao" >签到送积分</view>
+    <view class="h-3" bind:tap="toSetting" >ID:{{user.mobile}}</view>
+
+    <view class="h-5" >余额</view>
+    <view class="h-6" >{{user.amount.rechargeBlance}}</view>
+    <view class="h-7"></view>
+    <view class="h-8" >积分</view>
+    <view class="h-9" >{{user.amount.integralBlance}}</view>
+    <view class="h-10" bind:tap="toBalance" ></view>
+    <view class="h-11" bind:tap="toQiandao"></view>
+    <view class="h-gk-yk" wx:if="{{rank=='普通会员'}}" bind:tap="toChengwei">
+        <image src="http://h5.hyweb.com.cn/yuanben/owner/ykbg.png" />
+        <view class="yk-button">立即开通</view>
+    </view>
+    <view class="h-gk-cz" wx:if="{{rank=='充值会员'}}" bind:tap="toChengwei">
+        <image src="http://h5.hyweb.com.cn/yuanben/owner/czbg.png" />
+        <view class="cz-button">余额{{user.amount.rechargeBlance}}</view>
+    </view>
+    <view class="h-gk-tc" wx:if="{{rank=='套餐会员'}}" bind:tap="toHuiyuan">
+        <image src="http://h5.hyweb.com.cn/yuanben/owner/tcbg.png" />
+        <view class="tc-type">{{user.member.packerEntity.meat}}荤+{{user.member.packerEntity.vegetables}}素+配菜</view>
+        <view class="tc-button">还剩{{user.amount.deliveryBlance}}次宅配</view>
+    </view>
+</view>
+<view class="o-food">
+    <view class="f-title">
+        <view class="f-bt">我的食材</view>
+        <view class="f-dz" bind:tap="toMyorder1">全部配送单</view>
+        <view class="f-gd" bind:tap="toMyorder1">
+           <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" /> 
+        </view>
+    </view>
+    <view class="f-cont">
+        <view class="c-1" bind:tap="toMyorder2">
+            <image src="http://h5.hyweb.com.cn/yuanben/owner/wait.png" /> 
+        </view>
+        <view class="c-2" bind:tap="toMyorder3">
+            <image src="http://h5.hyweb.com.cn/yuanben/owner/song.png" /> 
+        </view>
+        <view class="c-3" bind:tap="toMyorder4">
+            <image src="http://h5.hyweb.com.cn/yuanben/owner/final.png" /> 
+        </view>
+        <view class="c-4" bind:tap="toMyorder2">待配送</view>
+        <view class="c-5" bind:tap="toMyorder3">配送中</view>
+        <view class="c-6" bind:tap="toMyorder4">已完成</view>
+    </view>
+</view>
+<view class="o-line"></view>
+<view class="o-equity">
+    <view class="e-title">我的权益</view>
+    <view class="e-1">
+        <view class="cont" bind:tap="toNcy">
+            <view class="cont-1">
+                <image src="http://h5.hyweb.com.cn/yuanben/owner/ncy.png" /> 
+            </view>
+            <view class="cont-2">农场游</view>
+        </view>
+        <view class="cont" bind:tap="toSc">
+            <view class="cont-1">
+                <image src="http://h5.hyweb.com.cn/yuanben/owner/sc.png" /> 
+            </view>
+            <view class="cont-2">私厨服务</view>
+        </view>
+        <view class="cont" bind:tap="toMs">
+            <view class="cont-1">
+                <image src="http://h5.hyweb.com.cn/yuanben/owner/ms.png" /> 
+            </view>
+            <view class="cont-2">民宿住宿</view>
+        </view>
+    </view>
+    <view class="e-2">
+         <view class="cont">
+            <view class="cont-1" bind:tap="toZp">
+                <image src="http://h5.hyweb.com.cn/yuanben/owner/zp.png" /> 
+            </view>
+            <view class="cont-2">宅配体验</view>
+        </view>
+        <view class="cont">
+            <view class="cont-1" bind:tap="toSr">
+                <image src="http://h5.hyweb.com.cn/yuanben/owner/sr.png" /> 
+            </view>
+            <view class="cont-2">私人会所</view>
+        </view>
+        <view class="cont">
+            <view class="cont-1"  bind:tap="toReport">
+                <image src="http://h5.hyweb.com.cn/yuanben/owner/ss.png" /> 
+            </view>
+            <view class="cont-2">膳食报告</view>
+            <view class="cont-3" wx:if="{{user.isViewSize!=0}}">{{user.isViewSize}}</view>
+        </view>
+    </view>
+</view>
+<view class="o-admin">
+    <view class="space"></view>
+    <view class="a-cont">
+         <view class="a-h" bind:tap="toManage">
+             <view class="a-1">
+                 <image src="http://h5.hyweb.com.cn/yuanben/owner/address.png" />
+             </view>
+             <view class="a-2">地址管理</view>
+             <view class="a-3">
+                 <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" /> 
+             </view>
+         </view>
+         <view class="a-line"></view>
+         <view class="a-h" bind:tap="toSign">
+             <view class="a-1">
+                 <image src="/image/driver.png" />
+             </view>
+             <view class="a-2">我是司机</view>
+             <view class="a-3">
+                 <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" /> 
+             </view>
+         </view>
+         <view class="a-line"></view>
+         <view class="a-h" bind:tap="toComplaint">
+             <view class="a-1">
+                 <image src="http://h5.hyweb.com.cn/yuanben/owner/fankui.png" />
+             </view>
+             <view class="a-2">投诉建议</view>
+             <view class="a-3">
+                 <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" /> 
+             </view>
+         </view>
+         <view class="a-line"></view>
+         <view class="a-h" bind:tap="toSetting"> 
+             <view class="a-1">
+                 <image src="http://h5.hyweb.com.cn/yuanben/owner/setting.png" />
+             </view>
+             <view class="a-2">设置</view>
+             <view class="a-3">
+                 <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" /> 
+             </view>
+         </view>
+    </view> 
+</view>

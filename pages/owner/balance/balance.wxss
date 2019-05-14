@@ -1,0 +1,111 @@
+.head{
+    width: 750rpx;
+    height: 300rpx;
+    background: url('http://h5.hyweb.com.cn/yuanben/owner/yue.png')
+}
+.h-0{
+    width: 750rpx;
+    height: 70rpx;
+}
+.h-1{
+    font-size:26rpx;
+    font-family:PingFang-SC-Medium;
+    font-weight:500;
+    color:rgba(255,255,255,1);
+    width: 750rpx;
+    text-align: center;
+}
+.h-2{
+    font-size:32rpx;
+    color:rgba(255,255,255,1);
+    width: 750rpx;
+    text-align: center;
+    margin-top: 35rpx;
+}
+.h-3{
+    width:160rpx;
+    height:50rpx;
+    background:rgba(231,255,220,1);
+    border-radius:25rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(125,166,71,1);
+    text-align: center;
+    margin: 36rpx 295rpx 0 295rpx;
+    line-height: 50rpx;
+}
+.title{
+    width:750rpx;
+    height:60rpx;
+    display: flex;
+    background: rgba(246, 246, 246, 1);
+}
+.t-1{
+    margin-left: 30rpx;
+    width: 6rpx;
+    height: 60rpx;
+    line-height: 60rpx;
+}
+.t-1 image{
+    width: 6rpx;
+    height: 30rpx;
+}
+.t-2{
+    margin-left: 21rpx;
+    font-size:30rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    line-height: 60rpx;
+}
+.list{
+    width: 750rpx;
+}
+.l-cont{
+    width: 690rpx;
+    margin: 0 auto;
+}
+.l-space{
+    width: 690rpx;
+    height: 20rpx;
+}
+.l-detail{
+    width: 690rpx;
+}
+.l-1{
+    display: flex;
+    justify-content: space-between
+}
+.l-1-1{
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    width: 400rpx;
+}
+.l-2-2{
+    font-size:20rpx;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+}
+.l-2{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 11rpx;
+    margin-bottom: 20rpx;
+}
+.l-1-2{
+    text-align: right;
+    font-size:32rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.l-2-1{
+    text-align: right;
+    font-size:20rpx;
+    font-weight:500;
+    color:rgba(153,153,153,1);
+}
+.l-line{
+    width:750rpx;
+    height:1rpx;
+    background: rgba(208,208,208,1);
+}

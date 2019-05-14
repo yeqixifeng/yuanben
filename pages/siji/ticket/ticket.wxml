@@ -1,0 +1,12 @@
+<view class="t-space"></view>
+<view class="t-cont">
+    <image src="/image/ticket.png" />
+    <view class="t-text1">宅配体验券</view>
+    <view class="t-text2">
+        <view class="t-1">编号：54168568125</view>
+        <view class="t-2">张女士</view>
+        <view class="t-3">13546786746</view>
+    </view>
+</view>
+
+<view class="b-cont" wx:if="{{!ishx}}">核销</view>

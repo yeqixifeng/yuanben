@@ -1,0 +1,86 @@
+<view class="head">
+    <view class="h-0"></view>
+    <view class="h-1">可用积分</view>
+    <view class="h-2">{{check.integralBlance}}</view>
+    <view class="h-3" wx:if="{{isCheck==0}}" bind:tap="qianDao">签到</view>
+    <view class="h-3-1" wx:if="{{isCheck==1}}" >签到</view>
+    <view class="h-4">已连续签到{{check.contDays}}天</view>
+</view>
+<view class="receive">
+    <view class="r-cont">
+        <view class="r-1">
+            <view class="r-1-1-qian">+{{zuonum}}</view>
+            <view class="r-1-2">昨日</view>
+        </view>
+        <view class="r-2"></view>
+        <view class="r-1">
+            <view class="r-1-1-zhong">+{{check.tadayIntegral}}</view>
+            <view class="r-1-2">今日</view>
+        </view>
+        <view class="r-2"></view>
+        <view class="r-1">
+            <view class="r-1-1-hou">+{{check.tomorrowIntegral}}</view>
+            <view class="r-1-2">明日</view>
+        </view>
+        <view class="r-2"></view>
+        <view class="r-1">
+            <view class="r-1-1-hou">+{{day4num}}</view>
+            <view class="r-1-2">{{day4}}</view>
+        </view>
+        <view class="r-2"></view>
+        <view class="r-1">
+            <view class="r-1-1-hou">+{{day5num}}</view>
+            <view class="r-1-2">{{day5}}</view>
+        </view>
+        <view class="r-2"></view>
+        <view class="r-1">
+            <view class="r-1-1-hou">+{{day6num}}</view>
+            <view class="r-1-2">{{day6}}</view>
+        </view>
+        <view class="r-2"></view>
+        <view class="r-1">
+            <view class="r-1-1-hou">+{{day7num}}</view>
+            <view class="r-1-2">{{day7}}</view>
+        </view>
+    </view>
+</view>
+<view class="experience">
+    <view class="e-0"></view>
+    <view class="e-1">
+        <view class="e-1-1">
+            <image src="/image/owner/ncy.png" />
+        </view>
+        <view class="e-1-2" >农场游体验券</view>
+        <view class="e-1-3" bind:tap="ncy">500积分兑换</view>
+    </view>
+    <view class="e-2"></view>
+    <view class="e-3">
+        <view class="e-1-1">
+            <image src="/image/owner/ms.png" />
+        </view>
+        <view class="e-1-2">民宿体验券</view>
+        <view class="e-1-3" bind:tap="ms">500积分兑换</view>
+    </view>
+</view>
+<view class="title">
+    <view class="t-1">
+        <image src="/image/owner/line.png" />
+    </view>
+    <view class="t-2">积分明细</view>
+</view>
+<view class="list" wx:for="{{list}}" wx:key="qiandao">
+    <view class="l-cont">
+        <view class="l-space"></view>
+        <view class="l-detail">
+            <view class="l-1">
+                <view class="l-1-1">{{item.detail}}</view>
+                <view class="l-1-2">{{item.activeIntegral}}</view>
+            </view>
+            <view class="l-2">
+                <view class="l-2-1">{{item.detailTime}}</view>
+                <view class="l-2-2">可用积分:{{item.activeIntegral}}</view>
+            </view>
+        </view>    
+    </view>
+    <view class="l-line"></view>
+</view>

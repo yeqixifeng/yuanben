@@ -1,0 +1,8 @@
+<view class="s-1">
+    <image src="http://h5.hyweb.com.cn/yuanben/paysuccess/s.png" />
+</view>
+<view class="s-2">充值成功</view>
+<view class="s-5">
+    <view class="b-1" bind:tap="toBack2">我知道了</view>
+    <view class="b-2" bind:tap="toNowfood">去商城逛逛</view>
+</view>

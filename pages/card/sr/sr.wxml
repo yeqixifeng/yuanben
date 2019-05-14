@@ -1,0 +1,29 @@
+<view class="wrap" wx:if="{{reply}}" bind:tap="isopen">
+  <view class="f-w">
+    <view class="f-1">请向工作人员出示此条码</view>
+    <view class="f-2"><canvas class='canvas' canvas-id='canvas'></canvas></view>
+  </view>
+</view>
+<view class="head">
+  <span class="line"></span>
+  <span class="text">卡券列表</span>
+  <span class="line"></span>
+</view>
+<view class="cont">
+    <view class="quan" wx:for="{{list}}" wx:key="vouchers" bindtap='tapHandler' data-code='{{item.cardUrl}}'>
+        <image src="http://h5.hyweb.com.cn/yuanben/card/sr1.png" wx:if="{{item.isUse=='未使用'}}" />
+        <button class="button" bindtap="isopen"  wx:if="{{item.isUse=='未使用'}}" data-index='{{index}}' >立即使用</button>
+        <image src="http://h5.hyweb.com.cn/yuanben/card/sr2.png" wx:if="{{item.isUse=='已使用'}}"/> 
+    </view>
+</view>
+<view class="head">
+  <span class="line"></span>
+  <span class="text">服务说明</span>
+  <span class="line"></span>
+</view>
+<view class="explain">
+    <view class="text2">1. 凭此劵可兑换一次叶青书画院私人会所体验服务；</view>
+    <view class="text2">2. 凭本券可兑换叶青书画院住宿（一间）一晚；</view>
+    <view class="text2">3. 本券不兑现，不找零，不与其他优惠同享；</view>
+    <view class="text2">4. 最终解释权归源本生活所有。</view>
+</view>

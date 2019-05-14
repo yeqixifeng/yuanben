@@ -1,0 +1,37 @@
+<view class="wrap"></view>
+<view class="e-1">
+    <view class="e-1-t">
+        <input type="text" value="{{userName}}" bindinput ="userNameInput"/>
+    </view>
+</view>
+<view class="e-2">
+    <view class="e-2-t">
+        <picker
+    placeholder="省市区"  
+    mode="region"
+    bindchange="bindRegionChange"
+    value="{{region}}"
+    custom-item="{{customItem}}"
+  >
+    <view class="picker">
+      {{region[0]}} {{region[1]}} {{region[2]}}
+    </view>
+  </picker>
+    </view>
+    <view class="e-2-i">
+        <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+    </view>
+</view>
+<view class="e-3">
+    <view class="e-3-t"><input type="text" value="{{userAddress}}" bindinput ="userAddressInput"/></view>
+</view>
+<view class="e-4">
+    <view class="e-4-t"><input type="text" value="{{userPhone}}" bindinput ="userPhoneInput"/></view>
+</view>
+<view class="e-5">
+    <view class="e-5-i" bind:tap="select">
+        <image src="{{is_select==0?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}} " />
+    </view>
+    <view class="e-5-t">{{is_select==0?'已设为默认地址':'设为默认地址'}}</view>
+</view>
+<view class="e-save" bind:tap="toBack">保存</view>

@@ -1,0 +1,26 @@
+<view class="wrap" wx:if="{{reply}}" bind:tap="isopen">
+  <view class="f-w">
+    <view class="f-1">请向工作人员出示此条码</view>
+    <view class="f-2"><canvas class='canvas' canvas-id='canvas'></canvas></view>
+  </view>
+</view>
+<view class="head" wx:if="{{grade!=3}}">
+  <span class="line"></span>
+  <span class="text">卡券列表</span>
+  <span class="line"></span>
+</view>
+<view class="cont" wx:if="{{grade!=3}}">
+    <view class="quan" wx:for="{{list}}" wx:key="vouchers" bindtap='tapHandler' data-code='{{item.cardUrl}}'>
+        <image src="http://h5.hyweb.com.cn/yuanben/card/zp1.png" wx:if="{{item.isUse=='未使用'}}" />
+        <button class="button" bindtap="isopen"  wx:if="{{item.isUse=='未使用'}}" data-index='{{index}}' >立即使用</button>
+        <image src="http://h5.hyweb.com.cn/yuanben/card/zp2.png" wx:if="{{item.isUse=='已使用'}}"/> 
+    </view>
+</view>
+<view wx:if="{{grade==3}}">
+  <view class="z-1">
+    <image src="http://h5.hyweb.com.cn/yuanben/card/space.png" />
+  </view>
+  <view class="z-2">您已经是宅配会员，享受私家农场宅配服务</view>
+</view>
+
+

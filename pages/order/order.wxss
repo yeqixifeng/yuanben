@@ -1,0 +1,496 @@
+.o-head {
+    position: relative;
+    width: 750rpx;
+    height: 180rpx;
+}
+
+.h-1 {
+    position: absolute;
+    width: 40rpx;
+    height: 40rpx;
+    left: 29rpx;
+    top: 29rpx;
+}
+
+.h-1 image {
+    width: 40rpx;
+    height: 40rpx;
+}
+
+.h-2 {
+    position: absolute;
+    font-size: 32rpx;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    left: 92rpx;
+    top: 30rpx;
+}
+
+.h-3 {
+    position: absolute;
+    font-size: 32rpx;
+    font-weight: 500;
+    color: rgba(0, 0, 0, 1);
+    left: 456rpx;
+    top: 33rpx;
+}
+
+.h-4 {
+    width: 576rpx;
+    position: absolute;
+    font-size: 26rpx;
+    font-family: PingFang-SC-Medium;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    left: 92rpx;
+    top: 90rpx;
+}
+
+.h-5 {
+    position: absolute;
+    width: 20rpx;
+    height: 20rpx;
+    left: 696rpx;
+    top: 109rpx;
+}
+
+.h-5 image {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.o-line {
+    width: 750rpx;
+    height: 20rpx;
+    background: #F6F6F6;
+}
+
+.c-title {
+    width: 720rpx;
+    height: 50rpx;
+    margin-left: 30rpx;
+    line-height: 50rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.c-wrap {
+    position: relative;
+    width: 750rpx;
+    height: 220rpx;
+}
+
+.c-line {
+    width: 750rpx;
+    height: 1rpx;
+    background: rgba(208, 208, 208, 0.46);
+}
+
+.c-1 {
+    position: absolute;
+    width: 160rpx;
+    height: 160rpx;
+    left: 30rpx;
+    top: 30rpx;
+}
+
+.c-1 image {
+    width: 160rpx;
+    height: 160rpx;
+}
+
+.c-2 {
+    position: absolute;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    left: 208rpx;
+    top: 50rpx;
+}
+
+.c-3 {
+    position: absolute;
+    left: 209rpx;
+    top: 95rpx;
+    font-size: 20rpx;
+    font-weight: 500;
+    color: rgba(153, 153, 153, 1);
+}
+
+.c-4 {
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(254, 90, 80, 1);
+    position: absolute;
+    left: 214rpx;
+    top: 145rpx;
+}
+
+.c-5 {
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    position: absolute;
+    left: 676rpx;
+    top: 168rpx;
+}
+
+.o-choose {
+    height: 201rpx;
+    width: 690rpx;
+    margin: 0 auto;
+}
+
+.o-discount {
+    width: 690rpx;
+    height: 100rpx;
+    line-height: 100rpx;
+    position: relative;
+}
+
+.d-1 {
+    position: absolute;
+    height: 100rpx;
+    left: 0;
+    font-size: 28rpx;
+    font-weight: 500;
+}
+
+.d-2 {
+    position: absolute;
+    font-size: 28rpx;
+    height: 100rpx;
+    right: 30rpx;
+    font-weight: 500;
+}
+
+.d-3 {
+    line-height: 98rpx;
+    position: absolute;
+    height: 100rpx;
+    right: 0;
+}
+
+.d-3 image {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.m-t {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    line-height: 110rpx;
+}
+
+.m-input {
+    position: relative;
+    top: 35rpx;
+    width: 500rpx;
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.o-message {
+    width: 690rpx;
+    height: 110rpx;
+    display: flex;
+}
+
+.o-statistics {
+    width: 660rpx;
+    height: 180rpx;
+    margin: 10rpx 60rpx 0 30rpx;
+    padding-bottom: 100rpx
+}
+
+.o-money {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20rpx;
+}
+
+.m-1 {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+}
+
+.m-2 {
+    font-size: 28rpx;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+}
+
+.o-footer {
+    width: 750rpx;
+    height: 100rpx;
+    display: flex;
+    line-height: 100rpx;
+    position: fixed;
+    bottom: 0;
+    background: white
+}
+
+.f-1 {
+    position: absolute;
+    margin-left: 314rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(5, 5, 5, 1);
+    height: 100rpx;
+}
+
+.f-2 {
+    position: absolute;
+    margin-left: 396rpx;
+    font-size: 36rpx;
+    font-weight: 800;
+    color: rgba(254, 94, 84, 1);
+    height: 100rpx;
+}
+
+.f-3 {
+    position: absolute;
+    margin-left: 531rpx;
+    width: 220rpx;
+    height: 100rpx;
+    background: rgba(254, 94, 84, 1);
+    font-size: 32rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+}
+
+/* 支付 */
+
+.wrap {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    z-index: 1;
+    position: fixed;
+}
+
+.topay {
+    width: 750rpx;
+    height: 600rpx;
+    background: rgba(255, 255, 255, 1);
+    position: fixed;
+    bottom: 0;
+    z-index: 10;
+    left: 0;
+}
+
+.t-a {
+    width: 750rpx;
+    height: 191rpx;
+    position: relative;
+}
+
+.t-a-1 {
+    width: 750rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    text-align: center;
+    position: absolute;
+    top: 30rpx;
+}
+
+.t-a-2 {
+    position: absolute;
+    top: 114rpx;
+    width: 750rpx;
+    font-size: 48rpx;
+    font-weight: bold;
+    color: rgba(254, 94, 84, 1);
+    text-align: center;
+}
+
+.t-a-3 {
+    position: absolute;
+    left: 709rpx;
+    top: 21rpx;
+}
+
+.t-a-3 image {
+    width: 20rpx;
+    height: 20rpx;
+}
+
+.t-b {
+    width: 750rpx;
+    height: 60rpx;
+    background: rgba(246, 246, 246, 1);
+}
+
+.t-b-1 {
+    margin-left: 30rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    height: 60rpx;
+    line-height: 60rpx;
+}
+
+.t-c {
+    width: 750rpx;
+    height: 201rpx;
+    position: relative;
+}
+
+.t-c-1 {
+    position: absolute;
+    left: 59rpx;
+    top: 26rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.t-c-1 image {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.t-c-2 {
+    position: absolute;
+    left: 135rpx;
+    top: 37rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.t-c-3 {
+    position: absolute;
+    width: 30rpx;
+    height: 30rpx;
+    left: 690rpx;
+    top: 35rpx;
+}
+
+.t-c-3 image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.t-c-4 {
+    position: absolute;
+    left: 59rpx;
+    top: 127rpx;
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.t-c-4 image {
+    width: 48rpx;
+    height: 48rpx;
+}
+
+.t-c-5 {
+    position: absolute;
+    left: 136rpx;
+    top: 138rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.t-c-6 {
+    position: absolute;
+    left: 690rpx;
+    top: 136rpx;
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.t-c-6 image {
+    width: 30rpx;
+    height: 30rpx;
+}
+
+.t-d {
+    width: 750rpx;
+    height: 100rpx;
+    background: rgba(125, 166, 71, 1);
+    font-size: 32rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    line-height: 100rpx;
+    text-align: center;
+}
+
+/* 密码 */
+
+.passwrod {
+    width: 100%;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, .5);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 102;
+}
+
+.pass {
+    width: 70%;
+    background-color: #fff;
+    border-radius: 10rpx;
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    padding: 40rpx 0;
+    overflow: hidden;
+    min-height: 175rpx;
+}
+
+.pass>image {
+    position: absolute;
+    top: 20rpx;
+    left: 20rpx;
+    width: 40rpx;
+}
+
+.tit {
+    padding-bottom: 40rpx;
+}
+
+.wrod {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.wrod input {
+    width: 80rpx;
+    height: 80rpx;
+    border: 1rpx solid #BFBFBF;
+    border-right: none;
+}
+
+.wrod input:last-child {
+    border: 1rpx solid #BFBFBF;
+}
+
+.input {
+    position: relative;
+    text-align: center;
+}
+
+.input>input {
+    position: absolute;
+    width: 300%;
+    height: 68rpx;
+    top: 0;
+    left: -300rpx;
+    text-align: left;
+    z-index: 105;
+}

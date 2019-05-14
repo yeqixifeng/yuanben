@@ -1,0 +1,30 @@
+<view class="r-head">充值到账户余额：</view>
+<view class="r-button">
+    <view class="b-1">￥</view>
+    <view class="b-2">
+        <input class="b-3" placeholder="0.00" bindinput="rechargeInput"/>
+    </view>
+</view>
+<view class="r-type">
+    <view class="t-1">请选择充值方式</view>
+</view>
+<view class="r-wx">
+    <view class="w-1">
+        <image src="http://h5.hyweb.com.cn/yuanben/component/wxpay.png" />
+    </view>
+    <view class="w-2">微信在线充值</view>
+    <view class="w-3">
+        <image src="http://h5.hyweb.com.cn/yuanben/component/selete.png" />
+    </view>
+</view>
+<view class="r-line"></view>
+<view class="r-ma">
+    <view class="m-1">
+        <input class="m-1-i" type="text" placeholder="输入兑换码充值" />
+    </view>
+    <view class="m-2">充值</view>
+</view>
+<view class="r-cz">
+    <view class="c-2"></view>
+    <view class="c-1" bind:tap="toSuccess2">充值</view>
+</view>

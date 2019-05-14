@@ -1,0 +1,143 @@
+<!-- pages/fooddetails/fooddetails.wxml -->
+<import src="/wxParse/wxParse.wxml" />
+<swiper class="swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}" indicator-dots='true' indicator-color='rgba(255, 255, 255, 1)' indicator-active-color='rgba(125,166,71,1)' circular='true'>
+    <block wx:for="{{imgUrls}}" wx:key="banner2">
+        <swiper-item class="back center" width="750rpx" height="450rpx">
+            <image src="{{item}}" class="slide-image" width="750rpx" height="450rpx" />
+        </swiper-item>
+    </block>
+</swiper>
+<view class='f-xq'>
+    <view class="xq-1">
+        <text>{{goods.title}}</text>
+    </view>
+    <view class="xq-2">{{goods.goodsDesc}}</view>
+    <view class="xq-3" wx:if="{{discount==0}}">￥{{goods.sku[sku].memberPrice}}</view>
+    <view class="xq-3" wx:if="{{discount==1}}">￥{{goods.sku[sku].preferentialPrice}}</view>
+    <view class="xq-4">￥{{goods.sku[sku].originalPrice}}</view>
+</view>
+<view class="f-line"></view>
+<view class='f-gg'>
+    <view class="gg-1">规格：</view>
+    <view class="gg-2">
+        <view class="{{sku==index?'active':'gg-3'}}" data-sku='{{index}}' bind:tap="changeSelete" wx:for="{{goods.sku}}" wx:key="foodd1">
+            {{item.amount}}{{item.isSpecification}}{{item.unit}}
+        </view>
+    </view>
+</view>
+<view class="f-line"></view>
+<view class='f-ax'>安心：  已检查64项农残围产表，符合检测标准。</view>
+<view class="f-line"></view>
+<view class='f-sh' bind:tap="toEdit" data-addressid='{{address.deliveryAddressId}}'>
+    <view class="sh-1">
+        送至：  <text class="t-1">{{address.province}}{{address.city}}{{address.county}}{{address.street}}</text>
+    </view>
+    <view class="sh-2">更多</view>
+    <view class="sh-3">
+        <image src="http://h5.hyweb.com.cn/yuanben/fooddetails/gengduo.png"></image>
+    </view>
+</view>
+<view class="f-line"></view>
+<view class="f-introduce">
+    <template is="wxParse" data="{{wxParseData:detiel.nodes}}" />
+</view>
+<view class="f-ge"></view>
+<view class="f-footer">
+    <view class="f-gouwu" bind:tap="toBasket1">
+        <view class="f-gouwu-d">{{basketNum}}</view>
+        <view class="f-gouwu-i">
+            <image src="http://h5.hyweb.com.cn/yuanben/fooddetails/gouwulan.png" />
+        </view>
+        <view class="f-gouwu-t">购物篮</view>
+    </view>
+    <view class="f-jiagouwu" bind:tap="openGouwu">加入购物篮</view>
+    <view class="f-pay" bind:tap="openReply">立即购买</view>
+</view>
+<view class="wrap" wx:if="{{gouwu}}" catchtouchmove="move">
+    <view class="togouwu">
+        <view class="gw-a">
+            <view class="gw-a-1">
+                <image src="{{goods.showMasterMap[0].url}}" />
+            </view>
+            <view class="gw-a-2">{{goods.title}}</view>
+            <view class="gw-a-3" wx:if="{{discount==0}}">
+                ￥{{goods.sku[sku].memberPrice*foodnum}}
+            </view>
+            <view class="gw-a-3" wx:if="{{discount==1}}">
+                ￥{{goods.sku[sku].preferentialPrice*foodnum}}
+            </view>
+            <view class="gw-a-4" bind:tap="closeGouwu">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/delete.png" />
+            </view>
+        </view>
+        <view class="gw-line"></view>
+        <view class="gw-b">
+            <view class="gw-b-1">规格：</view>
+            <view class="gw-b-2">
+                <view class="{{sku==index?'active2':'gw-b-3'}}" data-sku='{{index}}' bind:tap="changeSelete" wx:for="{{goods.sku}}" wx:key="foodd2">
+                    {{item.isSpecification}}
+                </view>
+            </view>
+        </view>
+        <view class="gw-line"></view>
+        <view class="gw-c">
+            <view class="gw-c-1">购买数量：</view>
+            <view class="jiajian">
+                <view class="jj-wrap">
+                    <view class="jj-jian" bind:tap="numJian">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jian.png" class="jj-jian-i" />
+                    </view>
+                    <view class="jj-num">{{foodnum}}</view>
+                    <view class="jj-jia" bind:tap="numJia">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jia.png" class="jj-jia-i" />
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="gw-d" bind:tap="toBasket">加入购物篮</view>
+    </view>
+</view>
+<view class="wrap" wx:if="{{reply}}" catchtouchmove="move">
+    <view class="topay">
+        <view class="gw-a">
+            <view class="gw-a-1">
+                <image src="{{goods.showMasterMap[0].url}}" />
+            </view>
+            <view class="gw-a-2">{{goods.title}}</view>
+            <view class="gw-a-3" wx:if="{{discount==0}}">
+                ￥{{goods.sku[0].memberPrice*foodnum}}
+            </view>
+            <view class="gw-a-3" wx:if="{{discount==1}}">
+                ￥{{goods.sku[0].preferentialPrice*foodnum}}
+            </view>
+            <view class="gw-a-4" bind:tap="closeReply">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/delete.png" />
+            </view>
+        </view>
+        <view class="gw-line"></view>
+        <view class="gw-b">
+            <view class="gw-b-1">规格：</view>
+            <view class="gw-b-2">
+                <view class="{{sku==index?'active2':'gw-b-3'}}" data-sku='{{index}}' bind:tap="changeSelete" wx:for="{{goods.sku}}" wx:key="foodd3">
+                    {{item.isSpecification}}
+                </view>
+            </view>
+        </view>
+        <view class="gw-line"></view>
+        <view class="gw-c">
+            <view class="gw-c-1">购买数量：</view>
+            <view class="jiajian">
+                <view class="jj-wrap">
+                    <view class="jj-jian" bind:tap="numJian">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jian.png" class="jj-jian-i" />
+                    </view>
+                    <view class="jj-num">{{foodnum}}</view>
+                    <view class="jj-jia" bind:tap="numJia">
+                        <image src="http://h5.hyweb.com.cn/yuanben/component/jia.png" class="jj-jia-i" />
+                    </view>
+                </view>
+            </view>
+        </view>
+        <view class="pay-d" bind:tap="toOrder">立即购买</view>
+    </view>
+</view>

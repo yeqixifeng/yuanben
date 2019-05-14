@@ -1,0 +1,133 @@
+.d-date {
+    width: 720rpx;
+    height: 80rpx;
+    margin-left: 30rpx;
+    line-height: 80rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+}
+
+.line {
+    width: 750rpx;
+    height: 1rpx;
+    background: rgba(234, 234, 234, 1);
+}
+.d-user{
+    width: 690rpx;
+    height: 170rpx;
+    margin: 0 auto;
+}
+.user-space{
+    width: 690rpx;
+    height: 29rpx;
+}
+.user-info{
+    height:37rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+    display: flex;
+    justify-content: space-between;
+}
+.info-1{
+    display: flex;
+}
+.info-2{
+    margin-left: 30rpx;
+}
+.user-address{
+    margin-top: 37rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.d-order{
+    width: 690rpx;
+    margin: 0 auto;
+}
+.order-space{
+    width: 690rpx;
+    height: 30rpx;
+}
+.order-bz{
+    height:37rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.order-list{
+    margin-top: 30rpx
+}
+
+.list{
+    margin-top: 20rpx;
+    display: flex;
+    justify-content: space-between;
+}
+.list-1{
+    height:37rpx;
+    font-size:26rpx;
+    font-weight:500;
+    color:rgba(51,51,51,1);
+}
+.d-yys{
+    width: 690rpx;
+    height: 100rpx;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+}
+.y-text1{
+    height: 37rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    line-height: 37rpx;
+}
+.y-input{
+    margin-left: 30rpx;
+    height: 100rpx;
+    font-size: 26rpx;
+    border: 0;
+    font-weight: 500;
+    color: rgba(51, 51, 51, 1);
+    line-height: 100rpx;
+    width: 500rpx;
+}
+
+.y-text2{
+    height: 37rpx;
+    font-size: 26rpx;
+    font-weight: 500;
+    color:rgba(255,122,122,1);
+    line-height: 37rpx;
+}
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 750rpx;
+    height: 100rpx;
+    display: flex;
+}
+
+.f-1 {
+    width: 375rpx;
+    height: 100rpx;
+    background: rgba(255, 122, 122, 1);
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 100rpx;
+}
+.f-2 {
+    width: 375rpx;
+    height: 100rpx;
+    background:rgba(139,195,74,1);
+    font-size: 30rpx;
+    font-weight: 500;
+    color: rgba(255, 255, 255, 1);
+    text-align: center;
+    line-height: 100rpx;
+}

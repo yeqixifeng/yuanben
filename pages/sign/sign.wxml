@@ -1,0 +1,12 @@
+<view class="s-logo">
+    <image src="http://h5.hyweb.com.cn/yuanben/logo.png" />
+</view>
+<view class="s-input1">
+    <input style="" placeholder="请输入账号" bindinput="username"/>
+</view>
+<view class="s-input2">
+    <input style="" password="{{true}}" placeholder="请输入密码" bindinput="password"/>
+</view>
+<view class="s-input4-2 " bind:tap="sign">
+    登录
+</view>

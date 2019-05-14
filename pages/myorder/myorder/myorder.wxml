@@ -1,0 +1,200 @@
+<view class="head">
+    <view class="h-wrap">
+        <view class="h-kj" data-type='1' bindtap="changetype">
+            <view class="{{type==1?'h-choose':'h-unchoose'}}">全部</view>
+            <view class="h-line" wx:if="{{type==1}}"></view>
+        </view>
+        <view class="h-kj" data-type='2' bindtap="changetype">
+            <view class="{{type==2?'h-choose':'h-unchoose'}}">待配送</view>
+            <view class="h-line" wx:if="{{type==2}}"></view>
+        </view>
+        <view class="h-kj" data-type='3' bindtap="changetype">
+            <view class="{{type==3?'h-choose':'h-unchoose'}}">配送中</view>
+            <view class="h-line" wx:if="{{type==3}}"></view>
+        </view>
+        <view class="yk-kj" data-type='4' bindtap="changetype">
+            <view class="{{type==4?'h-choose':'h-unchoose'}}">已完成</view>
+            <view class="h-line" wx:if="{{type==4}}"></view>
+        </view>
+    </view>
+</view>
+<view class="cont" wx:if="{{type==1}}">
+    <view class="c-space"></view>
+    <view class="c-list" wx:for="{{list}}" wx:key="all">
+        <view class="l-space"></view>
+        <view class="l-title">
+            <view class="t-1" wx:if="{{item.orderType=='普通订单'}}">订单编号：{{item.payNum}}</view>
+            <view class="t-1" wx:if="{{item.orderType=='套餐订单'}}">第{{item.deliveryNum}}次食材配送</view>
+            <view class="t-2" wx:if="{{item.status=='配送中'}}">配送中</view>
+            <view class="t-2" wx:if="{{item.status=='备货中'}}">打包中</view>
+            <view class="t-2" wx:if="{{item.status=='已完成'}}">已完成</view>
+            <view class="t-2" wx:if="{{item.status=='待配送'}}">待配送</view>
+        </view>
+        <view class="l-food" bind:tap="toDeliver" data-orderid='{{item.orderId}}'>
+            <view class="f-1">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[0].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[0].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-2">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[1].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[1].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-3">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[2].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[2].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-4">共{{item.items.length}}件</view>
+            <view class="f-5">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+        <view class="l-price" wx:if="{{item.payment!='0'}}">
+            <view class="p-1">合计:</view>
+            <view class="p-2">￥{{item.payment}}</view>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='普通订单'&&item.status=='待配送'||item.orderType=='套餐订单'&&item.status=='待配送'&&item.userStatus=='用户已确认当前订单'}}">
+            <button open-type="contact" class="b-3">联系营养师</button>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='普通订单'&&item.status=='配送中'||item.orderType=='普通订单'&&item.status=='备货中'||item.orderType=='套餐订单'&&item.status=='备货中'}}">
+            <view class="b-1" bind:tap="toDriver" data-orderid='{{item.orderId}}'>查看物流</view>
+            <button open-type="contact" class="b-2">联系营养师</button>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='套餐订单'&&item.status=='待配送'&&item.userStatus=='等待用户确认订单'}}">
+            <view class="b-1" data-orderid='{{item.orderId}}' bind:tap="toComfirm">确认配送</view>
+            <button open-type="contact" class="b-2">联系营养师</button>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='套餐订单'&&item.status=='配送中'}}">
+            <view class="b-1" bind:tap="toDriver" data-orderid='{{item.orderId}}'>查看物流</view>
+            <button open-type="contact" class="b-2">联系营养师</button>
+        </view>
+        <view class="l-button" wx:if="{{item.status=='已完成'}}">
+            <button open-type="contact" class="b-3">联系营养师</button>
+        </view>
+        <view class="l-space2"></view>
+    </view>
+</view>
+<view class="cont" wx:if="{{type==2}}">
+    <view class="c-space"></view>
+    <view class="c-list" wx:for="{{dabao}}" wx:key="dabao">
+        <view class="l-space"></view>
+        <view class="l-title">
+            <view class="t-1" wx:if="{{item.orderType=='普通订单'}}">订单编号：{{item.payNum}}</view>
+            <view class="t-1" wx:if="{{item.orderType=='套餐订单'}}">第{{item.deliveryNum}}次食材配送</view>
+            <view class="t-2" wx:if="{{item.status=='待配送'}}">待配送</view>
+            <view class="t-2" wx:if="{{item.status=='备货中'}}">打包中</view>
+        </view>
+        <view class="l-food" bind:tap="toDeliver" data-orderid='{{item.orderId}}'>
+            <view class="f-1">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[0].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[0].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-2">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[1].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[1].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-3">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[2].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[2].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-4">共{{item.items.length}}件</view>
+            <view class="f-5">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+        <view class="l-price" wx:if="{{item.payment!='0'}}">
+            <view class="p-1">合计:</view>
+            <view class="p-2">￥{{item.payment}}</view>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='普通订单'&&item.status=='待配送'||item.orderType=='套餐订单'&&item.status=='待配送'&&item.userStatus=='用户已确认当前订单'}}">
+            <button open-type="contact" class="b-3">联系营养师</button>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='普通订单'&&item.status=='备货中'||item.orderType=='套餐订单'&&item.status=='备货中'}}">
+            <view class="b-1" bind:tap="toDriver" data-orderid='{{item.orderId}}'>查看物流</view>
+            <button open-type="contact" class="b-2">联系营养师</button>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='套餐订单'&&item.status=='待配送'&&item.userStatus=='等待用户确认订单'}}">
+            <view class="b-1" bind:tap="toComfirm" data-orderid='{{item.orderId}}'>确认配送</view>
+            <button open-type="contact" class="b-2">联系营养师</button>
+        </view>
+        <view class="l-space2"></view>
+    </view>
+</view>
+<view class="cont" wx:if="{{type==3}}">
+    <view class="c-space"></view>
+    <view class="c-list" wx:for="{{peisong}}" wx:key="peisong">
+        <view class="l-space"></view>
+        <view class="l-title">
+            <view class="t-1" wx:if="{{item.orderType=='普通订单'}}">订单编号：{{item.payNum}}</view>
+            <view class="t-1" wx:if="{{item.orderType=='套餐订单'}}">第{{item.deliveryNum}}次食材配送</view>
+            <view class="t-2" wx:if="{{item.status=='配送中'}}">配送中</view>
+        </view>
+        <view class="l-food" bind:tap="toDeliver" data-orderid='{{item.orderId}}'>
+            <view class="f-1">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[0].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[0].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-2">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[1].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[1].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-3">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[2].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[2].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-4">共{{item.items.length}}件</view>
+            <view class="f-5">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+        <view class="l-price" wx:if="{{item.payment!='0'}}">
+            <view class="p-1">合计:</view>
+            <view class="p-2">￥{{item.payment}}</view>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='普通订单'&&item.status=='配送中'}}">
+            <view class="b-1" bind:tap="toDriver" data-orderid='{{item.orderId}}'>查看物流</view>
+            <button open-type="contact" class="b-2">联系营养师</button>
+        </view>
+        <view class="l-button" wx:if="{{item.orderType=='套餐订单'&&item.status=='配送中'}}">
+            <view class="b-1" bind:tap="toDriver" data-orderid='{{item.orderId}}'>查看物流</view>
+            <button open-type="contact" class="b-2">联系营养师</button>
+        </view>
+        <view class="l-space2"></view>
+    </view>
+</view>
+<view class="cont" wx:if="{{type==4}}">
+    <view class="c-space"></view>
+    <view class="c-list" wx:for="{{wancheng}}" wx:key="wancheng">
+        <view class="l-space"></view>
+        <view class="l-title">
+            <view class="t-1" wx:if="{{item.orderType=='普通订单'}}">订单编号：{{item.payNum}}</view>
+            <view class="t-1" wx:if="{{item.orderType=='套餐订单'}}">第{{item.deliveryNum}}次食材配送</view>
+            <view class="t-2" wx:if="{{item.status=='已完成'}}">已完成</view>
+        </view>
+        <view class="l-food" bind:tap="toDeliver" data-orderid='{{item.orderId}}'>
+            <view class="f-1">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[0].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[0].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-2">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[1].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[1].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-3">
+                <image wx:if="{{item.orderType=='普通订单'}}" src="{{item.items[2].lifeGoods.showMasterMap[0].url}}" />
+                <image wx:if="{{item.orderType=='套餐订单'}}" src="{{item.items[2].mealGoods.goodsImg}}" />
+            </view>
+            <view class="f-4">共{{item.items.length}}件</view>
+            <view class="f-5">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/gengduohui.png" />
+            </view>
+        </view>
+        <view class="l-price" wx:if="{{item.payment!='0'}}">
+            <view class="p-1">合计:</view>
+            <view class="p-2">￥{{item.payment}}</view>
+        </view>
+        <view class="l-button" wx:if="{{item.status=='已完成'}}">
+            <button open-type="contact" class="b-3">联系营养师</button>
+        </view>
+        <view class="l-space2"></view>
+    </view>
+</view>

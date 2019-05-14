@@ -1,0 +1,34 @@
+/* pages/broadcast/broadcast.wxss */
+.b-wrap{
+    position: relative;
+    width: 750rpx;
+    height: 1700rpx;
+}
+.b-1{
+    width: 150rpx;
+    height: 120rpx;
+    position: absolute;
+    top: 254rpx;
+    left: 493rpx;
+}
+.b-2{
+    position: absolute;
+    width: 150rpx;
+    height: 120rpx;
+    top: 353rpx;
+    left: 78rpx;
+}
+.b-3{
+    position: absolute;
+    width: 150rpx;
+    height: 120rpx;
+    top: 585rpx;
+    left: 344rpx;
+}
+.b-4{
+    position: absolute;
+    width: 150rpx;
+    height: 120rpx;
+    top: 857rpx;
+    left: 495rpx;
+}

@@ -1,0 +1,87 @@
+<swiper
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+   indicator-color='rgba(255, 255, 255, 1)'
+   indicator-active-color='rgba(125,166,71,1)'
+>
+  <block wx:for="{{imgUrls}}">
+    <swiper-item>
+      <image src="{{item}}" class="slide-image" width="750rpx" height="450rpx" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="d-introduce">
+    <view class="i-1">套餐会员宅配体验</view>
+    <view class="i-2">农场直达 配送到家</view>
+    <view class="i-3">￥39.9</view>
+    <view class="i-4"> ￥389元 </view>
+</view>
+<view class="d-line"></view>
+<view class="d-aggregate">
+    <view class="a-time">集合时间：2018-5.22 8:30-10:00</view>
+    <view class="a-place">集合地点：安吉高速路口</view>
+</view>
+<view class="d-line"></view>
+<view class="d-place">
+    <view class="p-1">目的地：安吉农场</view>
+</view>
+<view class="d-line"></view>
+<view class="d-place">
+    <view class="p-1">报名截止：2018-5.21 18:30</view>
+</view>
+<view class="d-line"></view>
+<view class="d-cont">
+    <image src="/image/details/introduce.png" />
+</view>
+<view class="d-line1"></view>
+<view class="d-foot">
+    <view class="f-1">
+    <button open-type="contact" session-from="weapp" plain="true">
+        <image src="http://h5.hyweb.com.cn/yuanben/details/kefu.png" />
+    </button>    
+    </view>
+    <view class="f-2">  
+        <image src="http://h5.hyweb.com.cn/yuanben/details/phone.png" />   
+    </view>
+    <view class="f-4">营养师</view>
+    <view class="f-5">电话咨询</view>
+    <view class="f-3">预约报名</view>
+</view>
+<view class="wrap" hidden="{{reply}}" catchtouchmove="true" ><!-- 付钱 -->
+    <view class="topay">
+        <view class="t-a">
+            <view class="t-a-1">支付金额</view>
+            <view class="t-a-2">￥239</view>
+            <view class="t-a-3" bind:tap="payexit">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/delete.png" />
+            </view>
+        </view>
+        <view class="t-b">
+            <view class="t-b-1">请选择支付方式</view>
+        </view>
+        <view class="t-c">
+            <view class="t-c-1">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/wxpay.png" />
+            </view>
+            <view class="t-c-2">微信支付</view>
+            <view class="t-c-3" bind:tap="onetype">
+                <image src="{{paytype == 1?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+            </view>
+            <view class="t-c-4">
+                <image src="http://h5.hyweb.com.cn/yuanben/component/yepay.png" />
+            </view>
+            <view class="t-c-5">余额支付</view>
+            <view class="t-c-6" bind:tap="twotype">
+                <image src="{{paytype == 0?'http://h5.hyweb.com.cn/yuanben/component/selete.png':'http://h5.hyweb.com.cn/yuanben/component/unselete.png'}}" />
+            </view>
+            <view class="t-c-7">
+                <input type="text" placeholder="输入已有体验券编号兑换"/>
+            </view>
+            <view class="t-c-8">兑换</view>
+        </view>
+        <view class="t-e"></view>
+        <view class="t-d">立即支付</view>
+    </view>
+</view>

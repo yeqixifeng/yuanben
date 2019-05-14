@@ -1,0 +1,70 @@
+<view class="wrap">
+    <view class="d-head">
+        <view class="h-wrap">
+            <view class="h-1">
+                <image src="http://h5.hyweb.com.cn/yuanben/myorder/peisong.png" />
+            </view>
+            <view class="h-2">
+                <view class="h-2-1">配送方式：源本生活私家宅配</view>
+                <view class="h-2-2">配送司机：王师傅</view>
+                <view class="h-2-3">司机电话：18888888888</view>
+            </view>
+        </view>
+    </view>
+    <view class="d-interval"></view>
+     <view class="d-record">
+        <view class="r-title">
+            <view class="r-title-1">配送状态</view>
+        </view>
+        <view class="r-line"></view>
+        <view class="r-cont">
+            <view class="r-1">
+                <view class="r-qiu1">
+                    <image src="http://h5.hyweb.com.cn/yuanben/myorder/now.png" />
+                </view>
+                <view class="r-xian"></view>
+                <view class="r-qiu2">
+                    <image src="http://h5.hyweb.com.cn/yuanben/myorder/history.png" />
+                </view>
+                <view class="r-xian"></view>
+                 <view class="r-qiu2">
+                    <image src="/http://h5.hyweb.com.cn/yuanben/myorder/history.png" />
+                </view>
+                <view class="r-xian"></view>
+                 <view class="r-qiu2">
+                    <image src="http://h5.hyweb.com.cn/yuanben/myorder/history.png" />
+                </view>
+                <view class="r-xian"></view>
+                 <view class="r-qiu2">
+                    <image src="http://h5.hyweb.com.cn/yuanben/myorder/history.png" />
+                </view>
+            </view>
+            <view class="r-2">
+                <view class="r-3">
+                    <view class="r-infor {{state==1?'color2':'color1'}}">装车完毕，配送司机：王师傅，电话：1888888888</view>
+                    <view class="r-time">2018-12-27 03:56:50</view>              
+                </view>
+                <view class="r-3">        
+                    <view class="r-4"></view>
+                    <view class="r-infor {{state==1?'color1':'color2'}}">装车完毕，配送司机：王师傅，电话：1888888888</view>
+                    <view class="r-time">2018-12-27 03:56:50</view>
+                </view>
+                <view class="r-3">        
+                    <view class="r-4"></view>
+                    <view class="r-infor {{state==1?'color1':'color2'}}">装车完毕，配送司机：王师傅，电话：1888888888</view>
+                    <view class="r-time">2018-12-27 03:56:50</view>
+                </view>
+                <view class="r-3">        
+                    <view class="r-4"></view>
+                    <view class="r-infor {{state==1?'color1':'color2'}}">装车完毕，配送司机：王师傅，电话：1888888888</view>
+                    <view class="r-time">2018-12-27 03:56:50</view>
+                </view>
+                <view class="r-3">        
+                    <view class="r-4"></view>
+                    <view class="r-infor {{state==1?'color1':'color2'}}">装车完毕，配送司机：王师傅，电话：1888888888</view>
+                    <view class="r-time">2018-12-27 03:56:50</view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

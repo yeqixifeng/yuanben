@@ -1,0 +1,18 @@
+<view class="head">
+    <image src="http://h5.hyweb.com.cn/yuanben/paysuccess/lingqu.png" />
+</view>
+<view class="c-1">您的第{{deliveryNum}}次食材配送已确认</view>
+<view class="c-2">配送日期为{{cmonth}}.{{cday}}日，配菜标准为:三荤七素</view>
+<view class="c-3">
+    <view class="c-3-1">荤菜：<text wx:key="hun" wx:for="{{hun}}">{{item.title}}、</text></view>
+    <view class="c-3-2">素菜：<text wx:key="su" wx:for="{{su}}">{{item.title}}、</text></view>
+    <view class="c-3-3">其他：<text wx:key="qita" wx:for="{{qita}}">{{item.title}}、</text></view>
+</view>
+<view class="c-4">私家农场将尽快处理您的宅配订单</view>
+<view class="c-5">两小时内选购另加菜可享受超低会员价!</view>
+<view class="c-6">
+    <view class="c-6-1" bind:tap="toBack">我知道了</view>
+    <view class="c-6-2" bind:tap="toNowfood">另加菜</view>
+</view>
+<view class="c-7">倒计时</view>
+<view class="c-8">{{hour}}:{{minute}}:{{second}}</view>

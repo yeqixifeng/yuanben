@@ -1,0 +1,111 @@
+<view class="wrap">
+    <view class="d-cont" wx:if="{{grade==1||grade==2}}">
+        <view class="c-title">订单编号：{{order.payNum}}</view>
+        <view wx:if="{{list.length==1}}" class="{{is_open?'c-order-zhan':'c-order1'}}">
+            <view class="c-item" wx:for="{{list}}" wx:key="order">
+                <view class="c-1">
+                    <image src="{{item.goodsImages}}" />
+                </view>
+                <view class="c-2">{{item.goodsName}}</view>
+                <view class="c-3">{{item.goodsSku}}</view>
+                <view class="c-4">￥{{item.price}}</view>
+                <view class="c-5">x{{item.goodsSize}}</view>
+            </view>
+        </view>
+        <view wx:else class="{{is_open?'c-order-zhan':'c-order2'}}">
+            <view class="c-item" wx:for="{{list}}" wx:key="order">
+                <view class="c-1">
+                    <image src="{{item.goodsImages}}" />
+                </view>
+                <view class="c-2">{{item.goodsName}}</view>
+                <view class="c-3">{{item.goodsSku}}</view>
+                <view class="c-4">￥{{item.price}}</view>
+                <view class="c-5">x{{item.goodsSize}}</view>
+            </view>
+        </view>
+        <view class="c-line"></view>
+        <view class="c-balance" bind:tap="listopen">
+            <view class="b-1">共{{order.items.length}}件商品</view>
+            <view class="b-2">合计:</view>
+            <view class="b-3">￥{{order.payment}}</view>
+            <view class="b-4">展开全部</view>
+            <view class="b-5">
+                <image src="{{is_open?'http://h5.hyweb.com.cn/yuanben/myorder/shang.png':'http://h5.hyweb.com.cn/yuanben/myorder/xia.png'}}" />
+            </view>
+        </view>
+    </view>
+    <view class="d-cont" wx:if="{{grade==3}}">
+        <view class="c-title">营养师配菜</view>
+        <view wx:if="{{tc1.length==1}}" class="{{is_open?'c-order-zhan':'c-order1'}}">
+            <view class="c-item" wx:for="{{tc1}}" wx:key="tc1">
+                <view class="c-1">
+                    <image src="{{item.goodsImages}}" />
+                </view>
+                <view class="c-2">{{item.goodsName}}</view>
+                <view class="c-3">{{item.goodsSku}}</view>
+                
+                <view class="c-5">x{{item.goodsSize}}</view>
+            </view>
+        </view>
+        <view wx:else class="{{is_open?'c-order-zhan':'c-order2'}}">
+            <view class="c-item" wx:for="{{tc1}}" wx:key="tc1">
+                <view class="c-1">
+                    <image src="{{item.goodsImages}}" />
+                </view>
+                <view class="c-2">{{item.goodsName}}</view>
+                <view class="c-3">{{item.goodsSku}}</view>
+                
+                <view class="c-5">x{{item.goodsSize}}</view>
+            </view>
+        </view>
+        <view class="c-line"></view>
+        <view class="c-balance" bind:tap="listopen">
+            <view class="b-1">标准：</view>
+            <view class="b-2">{{packer.meat}}荤{{packer.vegetables}}素</view>
+            <view class="b-4">展开全部</view>
+            <view class="b-5">
+                <image src="{{is_open?'http://h5.hyweb.com.cn/yuanben/myorder/shang.png':'http://h5.hyweb.com.cn/yuanben/myorder/xia.png'}}" />
+            </view>
+        </view>
+    </view>
+    <view  class="d-cont" wx:if="{{tc2.length}}">
+        <view class="c-title">另加菜</view>
+        <view wx:if="{{tc2.length==1}}" class="{{is_open2?'c-order-zhan':'c-order1'}}">
+            <view class="c-item" wx:for="{{tc2}}" wx:key="tc2">
+                <view class="c-1">
+                    <image src="{{item.goodsImages}}" />
+                </view>
+                <view class="c-2">{{item.goodsName}}</view>
+                <view class="c-3">{{item.sku.goodsSku}}</view>
+                <view class="c-4">￥{{item.goodsSku}}</view>
+                <view class="c-5">x{{item.goodsSize}}</view>
+            </view>
+        </view>
+        <view wx:else class="{{is_open2?'c-order-zhan':'c-order2'}}">
+            <view class="c-item" wx:for="{{tc2}}" wx:key="tc2">
+                <view class="c-1">
+                    <image src="{{item.goodsImages}}" />
+                </view>
+                <view class="c-2">{{item.goodsName}}</view>
+                <view class="c-3">{{item.goodsSku}}</view>
+                <view class="c-4">￥{{item.price}}</view>
+                <view class="c-5">x{{item.goodsSize}}</view>
+            </view>
+        </view>
+        <view class="c-line"></view>
+        <view class="c-balance" bind:tap="listopen2">
+            <view class="b-1">共{{tc2.length}}件商品</view>
+            <view class="b-2">合计:</view>
+            <view class="b-3">￥{{total}}</view>
+            <view class="b-4">展开全部</view>
+            <view class="b-5">
+                <image src="{{is_open2?'http://h5.hyweb.com.cn/yuanben/myorder/shang.png':'http://h5.hyweb.com.cn/yuanben/myorder/xia.png'}}" />
+            </view>
+        </view>
+    </view>
+</view>
+<view class="d-footer">
+    <view class="f-2">
+        <button open-type="contact" session-from="weapp" plain="true">联系营养师</button>
+    </view>
+</view>

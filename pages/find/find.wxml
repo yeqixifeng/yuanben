@@ -1,0 +1,109 @@
+<!--pages/find/find.wxml-->
+<view class="f-head">
+    <view class="f-head-ad">
+        <text class="f-head-ad-t">{{regionTwo}}{{regionTherr}}</text>
+    </view>
+    <text class="f-head-text">发现</text>
+</view>
+<swiper class="swiper" 
+  indicator-dots="{{indicatorDots}}"
+  autoplay="{{autoplay}}"
+  interval="{{interval}}"
+  duration="{{duration}}"
+    indicator-dots='true'
+    indicator-color='rgba(255, 255, 255, 1)'
+    indicator-active-color='rgba(125,166,71,1)'
+    previous-margin	='20rpx'
+    circular='true'
+    next-margin='20rpx'
+>
+  <block wx:for="{{imgUrls}}" wx:key="banner1">
+    <swiper-item class="back center" width="690rpx" height="300rpx">
+      <image src="{{item}}" class="slide-image" width="690rpx" height="300rpx" />
+    </swiper-item>
+  </block>
+</swiper>
+<view class="f-line"></view>
+<view class="f-c">
+  <view class="f-yx">
+    <view class="f-yx-h">
+      <image class="f-yx-h-i" src="http://h5.hyweb.com.cn/yuanben/find/title1.png"></image>
+    </view>
+    <view class="f-yx-c">
+      <view class="f-yx-c-h" bind:tap="tonowfood">
+        <image src='{{need.banner.listShowImg[0].url}}' />
+        <view class="f-yx-c-1">立即参加</view>
+      </view>
+      <view class="f-yx-c-l">
+        <view class="f-l" bind:tap="tofooddetails" data-food='{{need.goods[0].goodsId}}'>
+          <view class="f-l-c">
+            <image src="{{need.goods[0].img}}" />
+          </view>
+          <view class="f-l-t1"><text class="f-l-t1-t">{{need.goods[0].title}}</text></view>
+          <view class="f-l-t2">{{need.goods[0].sku[0].amount}}{{need.goods[0].sku[0].isSpecification}}{{need.goods[0].sku[0].unit}}</view>
+          <view class="f-l-t3">￥{{need.goods[0].sku[0].preferentialPrice}}</view>
+        </view>
+         <view class="f-l" bind:tap="tofooddetails" data-food='{{need.goods[1].goodsId}}'>
+          <view class="f-l-c">
+            <image src="{{need.goods[1].img}}" />
+          </view>
+          <view class="f-l-t1">{{need.goods[1].title}}</view>
+          <view class="f-l-t2">{{need.goods[1].sku[0].amount}}{{need.goods[1].sku[0].isSpecification}}{{need.goods[1].sku[0].unit}}</view>
+          <view class="f-l-t3">￥{{need.goods[1].sku[0].preferentialPrice}}</view>
+        </view>
+         <view class="f-l" bind:tap="tofooddetails" data-food='{{need.goods[2].goodsId}}'>
+          <view class="f-l-c">
+            <image src="{{need.goods[2].img}}" />
+          </view>
+          <view class="f-l-t1">{{need.goods[2].title}}</view>
+          <view class="f-l-t2">{{need.goods[2].sku[0].amount}}{{need.goods[2].sku[0].isSpecification}}{{need.goods[2].sku[0].unit}}</view>
+          <view class="f-l-t3">￥{{need.goods[2].sku[0].preferentialPrice}}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="f-line"></view>
+  <view class="f-yx">
+    <view class="f-yx-h">
+      <image class="f-yx-h-i" src="http://h5.hyweb.com.cn/yuanben/find/title2.png"></image>
+    </view>
+    <view class="f-yx-c">
+      <view class="f-yx-c-h">
+        <image src='http://h5.hyweb.com.cn/yuanben/find/cont1.png' />
+        <view class="f-yx-c-1">立即参加</view>
+      </view>
+      <view class="f-yx-c-l">
+        <view class="f-l">
+          <view class="f-l-c">
+            <image src="http://h5.hyweb.com.cn/yuanben/basket/tu.png" />
+          </view>
+          <view class="f-l-t1">有机大豆现磨豆腐</view>
+          <view class="f-l-t2">2块*200g/块</view>
+          <view class="f-l-t3">￥8.88</view>
+        </view>
+         <view class="f-l">
+          <view class="f-l-c">
+            <image src="http://h5.hyweb.com.cn/yuanben/basket/tu.png" />
+          </view>
+          <view class="f-l-t1">有机大豆现磨豆腐</view>
+          <view class="f-l-t2">2块*200g/块</view>
+          <view class="f-l-t3">￥8.88</view>
+        </view>
+         <view class="f-l">
+          <view class="f-l-c">
+            <image src="http://h5.hyweb.com.cn/yuanben/basket/tu.png" />
+          </view>
+          <view class="f-l-t1">有机大豆现磨豆腐</view>
+          <view class="f-l-t2">2块*200g/块</view>
+          <view class="f-l-t3">￥8.88</view>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<view class="f-footer">
+  <view class="f-f-i">
+    <image src='http://h5.hyweb.com.cn/yuanben/find/phone.png'/>
+  </view>
+  <view class="f-f-t">400-0000-0000</view>
+</view>
